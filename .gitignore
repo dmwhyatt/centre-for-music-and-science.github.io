@@ -3,3 +3,7 @@ resources/_gen/
 .hugo_build.lock
 .DS_Store
 node_modules/
+scripts/.venv/
+scripts/*.mp3
+scripts/*.mp4
+static/data/spectral_data.json.gz
