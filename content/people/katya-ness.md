@@ -4,6 +4,7 @@ role: "PhD Student"
 email: ""
 image: "/images/people/katya-ness.jpg"
 weight: 10
+category: phd
 website: ""
 ---
 

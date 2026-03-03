@@ -4,6 +4,7 @@ role: "PhD Student"
 email: ""
 image: "/images/people/lok-yan-lam.jpg"
 weight: 15
+category: phd
 website: ""
 ---
 

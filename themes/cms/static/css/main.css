@@ -174,7 +174,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(16px, 3vw, 32px);
+  gap: clamp(32px, 6vw, 64px);
 }
 
 .hero-cms-logo {
@@ -590,6 +590,22 @@ img {
   padding: var(--section-padding);
 }
 
+.people-category {
+  margin-bottom: 48px;
+}
+
+.people-category:last-child {
+  margin-bottom: 0;
+}
+
+.people-category-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+
 .people-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -623,6 +639,8 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .person-placeholder {
@@ -729,7 +747,8 @@ img {
 }
 
 /* ===== Events List Page ===== */
-.events-list-page {
+.events-list-page,
+.people-list-page {
   padding: 120px 0 80px;
 }
 
@@ -844,7 +863,16 @@ img {
 .publications-list-page .page-title {
   max-width: var(--container-max);
   margin: 0 auto 0;
-  padding: 0 24px 40px;
+  padding: 0 24px 24px;
+}
+
+.pub-list-legend {
+  max-width: var(--container-max);
+  margin: 0 auto 40px;
+  padding: 0 24px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
 }
 
 .container-wide {
@@ -950,6 +978,8 @@ a.pub-item-title:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .person-placeholder-large {

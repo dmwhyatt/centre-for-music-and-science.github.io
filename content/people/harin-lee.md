@@ -1,9 +1,10 @@
 ---
-title: "Harin Lee"
-role: "Junior Research Fellow"
+title: "Dr Harin Lee"
+role: "Postdoc"
 email: ""
 image: "/images/people/harin-lee.png"
 weight: 3
+category: postdoc
 website: ""
 ---
 

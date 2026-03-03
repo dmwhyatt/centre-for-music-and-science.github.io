@@ -1,5 +1,5 @@
 ---
-title: "The associations between music training, musical working memory, and visuospatial working memory"
+title: "The associations between music training, musical working memory, and visuospatial working memory: an opportunity for causal modeling"
 date: 2022-01-01
 authors: "Silas, S., Müllensiefen, D., Gelding, R., Frieler, K., & Harrison, P. M. C."
 journal: "Music Perception"

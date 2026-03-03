@@ -2,8 +2,9 @@
 title: "Prof Ian Cross"
 role: "Emeritus Professor"
 email: "ic108@cam.ac.uk"
-image: ""
+image: "/images/people/ian-cross.jpg"
 weight: 2
+category: emeritus
 website: "http://www.mus.cam.ac.uk/directory/ian-cross"
 ---
 

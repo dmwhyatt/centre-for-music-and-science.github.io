@@ -4,6 +4,7 @@ role: "PhD Student"
 email: ""
 image: "/images/people/catherine-tan.jpg"
 weight: 16
+category: phd
 website: ""
 ---
 

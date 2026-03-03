@@ -1,9 +1,10 @@
 ---
-title: "David Duncan"
+title: "Dr David Duncan"
 role: "Research Assistant"
 email: ""
-image: ""
+image: "/images/people/david-duncan.jpg"
 weight: 5
+category: postdoc
 website: ""
 ---
 

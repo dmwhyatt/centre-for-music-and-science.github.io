@@ -4,6 +4,7 @@ role: "PhD Student"
 email: ""
 image: "/images/people/david-whyatt.jpg"
 weight: 13
+category: phd
 website: ""
 ---
 

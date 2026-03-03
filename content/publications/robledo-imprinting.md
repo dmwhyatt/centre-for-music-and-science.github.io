@@ -1,5 +1,5 @@
 ---
-title: "Back to basics: A re-evaluation of the relevance of imprinting in Bowlby's attachment theory"
+title: "Back to basics: A re-evaluation of the relevance of imprinting in the genesis of Bowlby's attachment theory"
 date: 2022-01-01
 authors: "Robledo, J.-P., Cross, I., Boada-Bayona, L., & Demogeot, N."
 journal: "Frontiers in Psychology"

@@ -1,0 +1,64 @@
+{{ define "main" }}
+<section class="people-list-page">
+  <div class="container">
+    <h1 class="page-title">All People</h1>
+
+    {{ $people := .RegularPages }}
+    {{ $categories := slice (dict "key" "director" "label" "Director") (dict "key" "phd" "label" "PhD students") (dict "key" "postdoc" "label" "Postdoctoral researchers") (dict "key" "technical" "label" "Technical staff") (dict "key" "emeritus" "label" "Emeritus staff") (dict "key" "affiliate" "label" "Affiliates") }}
+
+    {{ range $categories }}
+      {{ $members := sort (where $people "Params.category" .key) "Params.weight" }}
+      {{ if $members }}
+    <div class="people-category">
+      <h2 class="people-category-heading">{{ .label }}</h2>
+      <div class="people-grid">
+        {{ range $members }}
+        <a href="{{ .RelPermalink }}" class="person-card">
+          <div class="person-photo">
+            {{ if .Params.image }}
+            <img src="{{ (strings.TrimPrefix "/" .Params.image) | relURL }}" alt="{{ .Title }}">
+            {{ else }}
+            <div class="person-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            {{ end }}
+          </div>
+          <h3 class="person-name">{{ .Title }}</h3>
+          <p class="person-role">{{ .Params.role }}</p>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+      {{ end }}
+    {{ end }}
+
+    {{ $other := where $people "Params.category" "not in" (slice "director" "phd" "postdoc" "technical" "emeritus" "affiliate") }}
+    {{ if $other }}
+    <div class="people-category">
+      <h2 class="people-category-heading">Other</h2>
+      <div class="people-grid">
+        {{ range sort $other "Params.weight" }}
+        <a href="{{ .RelPermalink }}" class="person-card">
+          <div class="person-photo">
+            {{ if .Params.image }}
+            <img src="{{ (strings.TrimPrefix "/" .Params.image) | relURL }}" alt="{{ .Title }}">
+            {{ else }}
+            <div class="person-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            {{ end }}
+          </div>
+          <h3 class="person-name">{{ .Title }}</h3>
+          <p class="person-role">{{ .Params.role }}</p>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

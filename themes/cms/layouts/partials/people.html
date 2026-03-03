@@ -2,7 +2,10 @@
   <div class="container">
     <h2 class="section-title">People</h2>
     <div class="people-grid">
-      {{ range sort (where .Site.RegularPages "Section" "people") "Params.weight" }}
+      {{ $people := where .Site.RegularPages "Section" "people" }}
+      {{ $featured := where $people "Params.weight" "le" 3 }}
+      {{ $phds := where $people "Params.role" "PhD Student" }}
+      {{ range sort ($featured | union $phds) "Params.weight" }}
       <a href="{{ .RelPermalink }}" class="person-card">
         <div class="person-photo">
           {{ if .Params.image }}
@@ -19,6 +22,9 @@
         <p class="person-role">{{ .Params.role }}</p>
       </a>
       {{ end }}
+    </div>
+    <div class="section-view-all">
+      <a href="{{ "people/" | relURL }}" class="btn-view-all">View all people &rarr;</a>
     </div>
   </div>
 </section>

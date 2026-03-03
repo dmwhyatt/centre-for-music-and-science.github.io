@@ -1,0 +1,11 @@
+{{ $authors := .authors }}
+{{ $labAuthors := .labAuthors }}
+{{ if and $authors $labAuthors }}
+  {{ $result := $authors }}
+  {{ range $labAuthors }}
+    {{ $result = replace $result . (printf "<strong>%s</strong>" .) }}
+  {{ end }}
+  {{ $result | safeHTML }}
+{{ else }}
+  {{ $authors }}
+{{ end }}

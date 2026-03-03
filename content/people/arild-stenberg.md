@@ -1,9 +1,10 @@
 ---
-title: "Arild Stenberg"
+title: "Dr Arild Stenberg"
 role: "Senior Research Associate"
 email: ""
-image: ""
+image: "/images/people/arild-stenberg.jpg"
 weight: 4
+category: postdoc
 website: ""
 ---
 

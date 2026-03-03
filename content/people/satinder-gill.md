@@ -2,8 +2,9 @@
 title: "Dr Satinder Gill"
 role: "Affiliated Researcher"
 email: "spg12@cam.ac.uk"
-image: ""
+image: "/images/people/satinder-gill.jpg"
 weight: 6
+category: affiliate
 website: ""
 ---
 

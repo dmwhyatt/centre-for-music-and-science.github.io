@@ -2,8 +2,9 @@
 title: "Dr Peter Harrison"
 role: "Director, Associate Professor"
 email: "pmch2@cam.ac.uk"
-image: ""
+image: "/images/people/peter-harrison.jpg"
 weight: 1
+category: director
 website: "https://scholar.google.ch/citations?user=NWh30ioAAAAJ"
 ---
 

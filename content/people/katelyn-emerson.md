@@ -4,6 +4,7 @@ role: "PhD Student"
 email: ""
 image: "/images/people/katelyn-emerson.jpg"
 weight: 11
+category: phd
 website: ""
 ---
 

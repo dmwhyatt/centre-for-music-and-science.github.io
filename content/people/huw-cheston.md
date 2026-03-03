@@ -4,6 +4,7 @@ role: "PhD Student"
 email: ""
 image: "/images/people/huw-cheston.jpg"
 weight: 9
+category: phd
 website: ""
 ---
 

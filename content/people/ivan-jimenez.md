@@ -2,8 +2,9 @@
 title: "Dr Ivan Jimenez"
 role: "Affiliate Researcher"
 email: "ivan.jimenez.rodriguez@uniarts.fi"
-image: ""
+image: "/images/people/Ivan_Jimenez.jpg"
 weight: 8
+category: affiliate
 website: ""
 ---
 

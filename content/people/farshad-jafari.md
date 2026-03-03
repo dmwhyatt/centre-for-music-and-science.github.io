@@ -4,6 +4,7 @@ role: "PhD Student"
 email: ""
 image: "/images/people/farshad-jafari.jpg"
 weight: 14
+category: phd
 website: ""
 ---
 

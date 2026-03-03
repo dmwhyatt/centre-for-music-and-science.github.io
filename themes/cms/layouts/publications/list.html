@@ -1,43 +1,80 @@
 {{ define "main" }}
+<style>
+.fpub { background-color: #124191; color: #fff; padding: 64px 0; }
+.fpub-grid { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 380px; gap: 48px; align-items: center; }
+.fpub-label { display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.6; margin-bottom: 12px; }
+.fpub-title { font-size: 1.5rem; font-weight: 700; line-height: 1.3; margin-bottom: 12px; color: #fff; }
+.fpub-cite { font-size: 0.85rem; opacity: 0.75; line-height: 1.5; margin-bottom: 20px; font-style: italic; }
+.fpub-desc { font-size: 0.9rem; line-height: 1.7; opacity: 0.85; margin-bottom: 24px; }
+.fpub-desc p { margin-bottom: 12px; }
+.fpub-desc p:last-child { margin-bottom: 0; }
+.fpub-link { display: inline-block; color: #fff; font-weight: 600; font-size: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.4); padding-bottom: 2px; text-decoration: none; transition: border-color 0.2s; }
+.fpub-link:hover { border-color: #fff; }
+.fpub-img { width: 100%; border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+@media (max-width: 768px) {
+  .fpub-grid { grid-template-columns: 1fr; gap: 32px; }
+  .fpub-img-wrap { order: -1; max-width: 320px; }
+}
+</style>
 <section class="publications-list-page">
   <div class="container-wide">
     <h1 class="page-title">Publications</h1>
+    <p class="pub-list-legend"><strong>Bold</strong> indicates authors from the lab; <em>*</em> indicates shared first authorship.</p>
+  </div>
 
-    {{ $pubs := sort .Pages "Date" "desc" }}
-
-    {{ $years := slice }}
-    {{ range $pubs }}
-      {{ $y := .Date.Format "2006" }}
-      {{ if not (in $years $y) }}
-        {{ $years = $years | append $y }}
-      {{ end }}
-    {{ end }}
-
-    {{ range $i, $year := $years }}
-    <div class="pub-year-block {{ if eq (mod $i 2) 1 }}pub-year-block-alt{{ end }}">
-      <div class="pub-year-inner">
-        <h2 class="pub-year-heading">
-          {{ $year }}
-          {{ range $pubs }}{{ if and (eq (.Date.Format "2006") $year) .Params.inpress }} (In Press){{ end }}{{ end }}
-        </h2>
-        <ul class="pub-year-list">
-          {{ range $pubs }}
-          {{ if eq (.Date.Format "2006") $year }}
-          <li class="pub-year-item">
-            <span class="pub-item-authors">{{ .Params.authors }}</span>
-            {{ if .Params.doi }}
-            <a href="{{ .Params.doi }}" target="_blank" rel="noopener" class="pub-item-title">{{ .Title }}</a>
-            {{ else }}
-            <span class="pub-item-title">{{ .Title }}</span>
-            {{ end }}
-            {{ if .Params.journal }}<span class="pub-item-journal">{{ .Params.journal }}</span>{{ end }}
-          </li>
-          {{ end }}
-          {{ end }}
-        </ul>
+  {{ if .Params.featured }}
+  <div class="fpub">
+    <div class="fpub-grid">
+      <div>
+        <span class="fpub-label">Featured Publication</span>
+        <h2 class="fpub-title">{{ .Params.featured.title }}</h2>
+        <div class="fpub-cite">{{ .Params.featured.citation | markdownify }}</div>
+        <div class="fpub-desc">{{ .Params.featured.description | markdownify }}</div>
+        {{ if .Params.featured.doi }}
+        <a href="{{ .Params.featured.doi }}" target="_blank" rel="noopener" class="fpub-link">Read the paper &rarr;</a>
+        {{ end }}
+      </div>
+      <div class="fpub-img-wrap">
+        <img src="{{ .Params.featured.image | relURL }}" alt="{{ .Params.featured.title }}" class="fpub-img">
       </div>
     </div>
-    {{ end }}
   </div>
+  {{ end }}
+
+  {{ $pubs := sort .Pages "Date" "desc" }}
+
+  {{ $years := slice }}
+  {{ range $pubs }}
+    {{ $y := .Date.Format "2006" }}
+    {{ if not (in $years $y) }}
+      {{ $years = $years | append $y }}
+    {{ end }}
+  {{ end }}
+
+  {{ range $i, $year := $years }}
+  <div class="pub-year-block {{ if eq (mod $i 2) 1 }}pub-year-block-alt{{ end }}">
+    <div class="pub-year-inner">
+      <h2 class="pub-year-heading">
+        {{ $year }}
+        {{ range $pubs }}{{ if and (eq (.Date.Format "2006") $year) .Params.inpress }} (In Press){{ end }}{{ end }}
+      </h2>
+      <ul class="pub-year-list">
+        {{ range $pubs }}
+        {{ if eq (.Date.Format "2006") $year }}
+        <li class="pub-year-item">
+          <span class="pub-item-authors">{{ partial "bold-lab-authors" (dict "authors" .Params.authors "labAuthors" $.Site.Data.lab_authors) }}</span>
+          {{ if .Params.doi }}
+          <a href="{{ .Params.doi }}" target="_blank" rel="noopener" class="pub-item-title">{{ .Title }}</a>
+          {{ else }}
+          <span class="pub-item-title">{{ .Title }}</span>
+          {{ end }}
+          {{ if .Params.journal }}<span class="pub-item-journal">{{ .Params.journal }}</span>{{ end }}
+        </li>
+        {{ end }}
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+  {{ end }}
 </section>
 {{ end }}
