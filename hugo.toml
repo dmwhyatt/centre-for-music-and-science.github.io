@@ -1,4 +1,4 @@
-baseURL = 'https://centre-for-music-and-science.github.io/website/'
+baseURL = 'https://centre-for-music-and-science.github.io/'
 languageCode = 'en-gb'
 title = 'Centre for Music and Science'
 theme = 'cms'
