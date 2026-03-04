@@ -815,6 +815,14 @@ img {
   color: rgba(255, 255, 255, 0.4);
 }
 
+@media (max-width: 640px) {
+  .footer-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
 /* ===== View All Button ===== */
 .section-view-all {
   text-align: center;
