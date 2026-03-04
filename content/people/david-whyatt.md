@@ -8,6 +8,4 @@ category: phd
 website: ""
 ---
 
-David Whyatt is supervised by Peter Harrison, having completed his MPhil at Cambridge under his supervision last year. His PhD work concerns the computational modelling of melody, with a specific view towards capturing the time-course of formation of melodic memory.
-
-David graduated from his undergraduate degree in jazz performance from the Guildhall School of Music and Drama with a Concert Recital Diploma, and is actively involved in the student music scene in and around Cambridge, presently co-directing the University Jazz Orchestra.
+David studies under the supervision of Peter Harrison, who also supervised his MPhil research project. His PhD research studies the memorability of melodies, developing computational approaches to modelling cognitive behaviour across different musical tasks. A big focus of this computational work is facilitating access to tools and methods that have a high barrier-to-entry, in the hopes that this may encourage more people to apply these tools in their own work. David greatly enjoys collaborative programming work, and has made a handful of open-source contributions to other computational musical analysis projects. Before coming to Cambridge, David studied jazz performance at the Guildhall School of Music and Drama in London. He remains an avid saxophonist and can usually be found playing in any of the city’s vibrant student music venues!
