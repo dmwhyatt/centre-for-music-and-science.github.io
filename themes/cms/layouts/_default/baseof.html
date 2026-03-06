@@ -9,7 +9,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+  <!-- Default favicon (fallback for unsupported browsers) -->
   <link rel="icon" href="{{ "images/logos/cms_favicon.png" | relURL }}" type="image/png">
+  <!-- Light mode favicon -->
+  <link rel="icon" href="{{ "images/logos/cms_favicon.png" | relURL }}" type="image/png" media="(prefers-color-scheme: light)">
+  <!-- Dark mode favicon -->
+  <link rel="icon" href="{{ "images/logos/cms_favicon_white.png" | relURL }}" type="image/png" media="(prefers-color-scheme: dark)">
   {{ if .IsHome }}
   <meta name="spectral-base-url" content="{{ "data/" | relURL }}">
   <meta name="audio-base-url" content="{{ "audio/" | relURL }}">
