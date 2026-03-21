@@ -383,9 +383,9 @@
     cameraBlend += (blendTarget - cameraBlend) * (1 - Math.exp(-CAMERA_BLEND_SPEED * dt));
 
     var phase0 = 0.175 * 4;
-    var idleX = Math.sin(elapsed * 0.08 + phase0) * 3.5;
-    var idleY = 9.0 + Math.sin(elapsed * 0.05 + phase0) * 1.5;
-    var idleZ = 8.0 + Math.cos(elapsed * 0.06 + phase0) * 2.0;
+    var idleX = Math.sin(-elapsed * 0.08 + phase0) * 3.5;
+    var idleY = 9.0 + Math.sin(-elapsed * 0.05 + phase0) * 1.5;
+    var idleZ = 8.0 + Math.cos(-elapsed * 0.06 + phase0) * 2.0;
 
     var detailX = 0;
     var detailY = 8;
