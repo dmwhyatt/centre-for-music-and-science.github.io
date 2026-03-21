@@ -57,7 +57,6 @@
   var playBtn = document.getElementById('hero-play-btn');
   var nextBtn = document.getElementById('hero-next-btn');
   var timeDisplay = document.getElementById('hero-time');
-  var playHint = document.getElementById('hero-play-hint');
   var btnRing = document.getElementById('hero-btn-ring');
   var trackTitle = document.getElementById('hero-track-title');
   var trackArtist = document.getElementById('hero-track-artist');
@@ -89,7 +88,41 @@
 
     loadTrack(currentTrackIdx);
     initAudioPlayer();
+    bindHeroInfoPanel();
     animate();
+  }
+
+  function bindHeroInfoPanel() {
+    var infoBtn = document.getElementById('hero-info-btn');
+    var infoPanel = document.getElementById('hero-info-panel');
+    if (!infoBtn || !infoPanel) return;
+
+    function setOpen(open) {
+      infoBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) {
+        infoPanel.removeAttribute('hidden');
+      } else {
+        infoPanel.setAttribute('hidden', '');
+      }
+    }
+
+    infoBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      setOpen(infoPanel.hasAttribute('hidden'));
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !infoPanel.hasAttribute('hidden')) {
+        setOpen(false);
+        infoBtn.focus();
+      }
+    });
+
+    document.addEventListener('click', function (e) {
+      if (infoPanel.hasAttribute('hidden')) return;
+      if (infoPanel.contains(e.target) || infoBtn.contains(e.target)) return;
+      setOpen(false);
+    });
   }
 
   function onResize() {
@@ -374,21 +407,18 @@
 
     audio.addEventListener('play', function () {
       isPlaying = true;
-      if (playHint) playHint.style.display = 'none';
       updatePlayerUI();
     });
 
     audio.addEventListener('pause', function () {
       isPlaying = false;
       idleReady = false;
-      if (playHint) playHint.style.display = '';
       updatePlayerUI();
     });
 
     audio.addEventListener('ended', function () {
       isPlaying = false;
       idleReady = false;
-      if (playHint) playHint.style.display = '';
       if (btnRing) btnRing.style.setProperty('--progress', 0);
       updatePlayerUI();
     });

@@ -4,29 +4,33 @@
     <div class="hero-lab-logo-watermark" aria-hidden="true">
       <img src="{{ "images/logos/cms_logo_white.svg" | relURL }}" alt="" class="hero-lab-logo-watermark-img">
     </div>
-    <div class="spectral-player-top">
-      <div class="hero-play-hint" id="hero-play-hint">
-        <span>Play music</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 5v14M5 12l7 7 7-7"/>
+    <div class="hero-corner-left">
+      <button type="button" id="hero-info-btn" class="hero-info-btn" aria-expanded="false" aria-controls="hero-info-panel" title="Banner audio">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 16v-4M12 8h.01"/>
         </svg>
-      </div>
-      <audio id="hero-audio" preload="auto"></audio>
-      <div class="hero-player" id="hero-player">
-        <div class="hero-btn-ring" id="hero-btn-ring">
-          <button id="hero-play-btn" class="hero-play-btn" aria-label="Play">
-            <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
-            <svg class="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
-          </button>
+      </button>
+      <div id="hero-info-panel" class="hero-info-panel" role="region" aria-label="Banner audio" hidden>
+        <div class="spectral-player-top hero-info-panel__player">
+          <audio id="hero-audio" preload="auto"></audio>
+          <div class="hero-player" id="hero-player">
+            <div class="hero-btn-ring" id="hero-btn-ring">
+              <button type="button" id="hero-play-btn" class="hero-play-btn" aria-label="Play">
+                <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+                <svg class="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+              </button>
+            </div>
+            <div class="hero-track-info">
+              <span class="hero-track-title" id="hero-track-title"></span>
+              <span class="hero-track-artist" id="hero-track-artist"></span>
+            </div>
+            <span id="hero-time" class="hero-time">0:00</span>
+            <button type="button" id="hero-next-btn" class="hero-next-btn" aria-label="Next track">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l12 8-12 8V4z"/><rect x="18" y="4" width="2" height="16"/></svg>
+            </button>
+          </div>
         </div>
-        <div class="hero-track-info">
-          <span class="hero-track-title" id="hero-track-title"></span>
-          <span class="hero-track-artist" id="hero-track-artist"></span>
-        </div>
-        <span id="hero-time" class="hero-time">0:00</span>
-        <button id="hero-next-btn" class="hero-next-btn" aria-label="Next track">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l12 8-12 8V4z"/><rect x="18" y="4" width="2" height="16"/></svg>
-        </button>
       </div>
     </div>
     <div class="hero-logos-bottom">
