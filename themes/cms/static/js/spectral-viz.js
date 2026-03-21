@@ -49,7 +49,7 @@
     }
   ];
 
-  var currentTrackIdx = 0;
+  var currentTrackIdx = Math.floor(Math.random() * TRACKS.length);
   var scene, camera, renderer, mesh, clock;
   var ORTHO_FRUSTUM_SIZE = 12;
   var spectralData = null;
@@ -443,7 +443,7 @@
   function initAudioPlayer() {
     if (!audio || !playBtn) return;
 
-    loadTrack(0);
+    loadTrack(currentTrackIdx);
 
     playBtn.addEventListener('click', function () {
       if (isPlaying) {
