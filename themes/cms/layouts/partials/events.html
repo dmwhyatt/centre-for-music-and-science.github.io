@@ -1,7 +1,7 @@
-<section class="latest-events" id="events">
+<section class="latest-events" id="news">
   <div class="container">
-    <h2 class="section-title">Latest Events</h2>
-    {{ $events := first 3 (sort (where .Site.RegularPages "Section" "events") "Date" "desc") }}
+    <h2 class="section-title">Latest News</h2>
+    {{ $events := first 3 (sort (where .Site.RegularPages "Section" "news") "Date" "desc") }}
     <div class="events-grid">
       {{ with index $events 0 }}
       <a href="{{ if .Params.externalUrl }}{{ .Params.externalUrl }}{{ else }}{{ .RelPermalink }}{{ end }}" class="event-card event-card-featured">
@@ -47,7 +47,7 @@
       </div>
     </div>
     <div class="section-view-all">
-      <a href="{{ "events/" | relURL }}" class="btn-view-all">View all events &rarr;</a>
+      <a href="{{ "news/" | relURL }}" class="btn-view-all">View all news &rarr;</a>
     </div>
   </div>
 </section>

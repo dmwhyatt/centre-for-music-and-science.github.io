@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section class="events-list-page">
   <div class="container">
-    <h1 class="page-title">All Events</h1>
+    <h1 class="page-title">All News</h1>
     <div class="events-timeline">
       {{ range sort .Pages "Date" "desc" }}
       <a href="{{ if .Params.externalUrl }}{{ .Params.externalUrl }}{{ else }}{{ .RelPermalink }}{{ end }}" class="event-list-item"{{ if .Params.externalUrl }} target="_blank" rel="noopener"{{ end }}>
