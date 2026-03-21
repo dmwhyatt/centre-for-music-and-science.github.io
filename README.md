@@ -81,7 +81,15 @@ doi: "https://doi.org/10.xxxx/xxxxx"
 
 ### New person
 
-Create a file in `content/people/`:
+To add a new person, complete these steps:
+
+1. Create a new Markdown file in `content/people/` using the person's slug, for example `content/people/jane-doe.md`.
+2. Add front matter for the person's name, role, category, ordering, and contact details.
+3. Add an optional short bio below the front matter.
+4. Place the profile photo in `static/images/people/`.
+5. Run `hugo server -D` and check both the homepage people cards and the person's detail page.
+
+Recommended front matter:
 
 ```yaml
 ---
@@ -91,13 +99,19 @@ category: "phd"          # director | phd | postdoc | technical | emeritus | aff
 weight: 10               # controls sort order within category
 email: "abc1@cam.ac.uk"
 image: "/images/people/full-name.jpg"
+group: "mcc"             # optional: mcc | mls
 website: "https://example.com"
 ---
 
 Optional bio text here.
 ```
 
-Place the photo in `static/images/people/`.
+Notes:
+
+- `group` is optional. If set, use `mcc` for Music Cognition & Culture or `mls` for Music, Language & Society.
+- `weight` controls sorting within a category. Lower numbers appear first.
+- The photo does not need to be perfectly square, but it will be cropped into a circular frame on the site. A centered head-and-shoulders image with roughly square dimensions works best.
+- Use an image path under `static/images/people/`, for example `"/images/people/jane-doe.jpg"`.
 
 ### New project
 
