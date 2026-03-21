@@ -9,42 +9,16 @@
 
   var TRACKS = [
     {
-      title: 'Berghain',
-      artist: 'ROSAL\u00cdA',
-      audioFile: 'berghain.mp3',
-      dataFile: 'berghain-spectral.json',
+      title: 'Cello Suite No. 1',
+      artist: 'Fournier (1961) \u2022 Bach',
+      audioFile: 'bach-cello-suite-1.mp3',
+      dataFile: 'bach-cello-suite-1-spectral.json',
       ringColor: '#87ceeb',
       theme: 'blue',
       colors: {
         deep: [0.102, 0.137, 0.196],
         mid: [0.05, 0.55, 0.95],
         bright: [1.0, 0.85, 0.2]
-      }
-    },
-    {
-      title: 'Fever',
-      artist: 'Dua Lipa',
-      audioFile: 'fever.mp3',
-      dataFile: 'fever-spectral.json',
-      ringColor: '#ff4455',
-      theme: 'red',
-      colors: {
-        deep: [0.102, 0.137, 0.196],
-        mid: [0.85, 0.1, 0.2],
-        bright: [1.0, 0.88, 0.25]
-      }
-    },
-    {
-      title: 'Cello Suite No. 1',
-      artist: 'Fournier (1961) \u2022 Bach',
-      audioFile: 'bach-cello-suite-1.mp3',
-      dataFile: 'bach-cello-suite-1-spectral.json',
-      ringColor: '#d4a855',
-      theme: 'gold',
-      colors: {
-        deep: [0.102, 0.137, 0.196],
-        mid: [0.75, 0.55, 0.15],
-        bright: [1.0, 0.92, 0.6]
       }
     }
   ];
