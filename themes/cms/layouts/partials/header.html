@@ -3,11 +3,11 @@
     <a href="{{ .Site.Home.RelPermalink }}" class="site-logo">
       <img src="{{ "images/logos/cms_logo_white_blue.png" | relURL }}" alt="Centre for Music and Science" class="logo-img">
     </a>
-    <nav class="site-nav">
-      <button class="nav-toggle" aria-label="Toggle navigation">
+    <nav class="site-nav" aria-label="Main">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links">
         <li><a href="{{ .Site.Home.RelPermalink }}#research">Research</a></li>
         <li><a href="{{ .Site.Home.RelPermalink }}#events">Events</a></li>
         <li><a href="{{ .Site.Home.RelPermalink }}#publications">Publications</a></li>

@@ -21,8 +21,9 @@
   {{ end }}
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   {{ partial "header.html" . }}
-  <main>
+  <main id="main-content">
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}

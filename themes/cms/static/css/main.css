@@ -9,7 +9,7 @@
   --color-bg: #ffffff;
   --color-text: #1a1a1a;
   --color-text-light: #555;
-  --color-text-muted: #888;
+  --color-text-muted: #767676;
   --color-accent: #124191;
   --color-accent-light: #e8eef7;
   --color-border: #e0e0e0;
@@ -36,6 +36,27 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 0.5rem 1rem;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  z-index: 9999;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
 /* Body copy: global `a` reset keeps nav/cards clean; restore link affordance in prose. */
@@ -2464,5 +2485,12 @@ a.pub-item-title:hover {
 
   :root {
     --section-padding: 48px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
   }
 }

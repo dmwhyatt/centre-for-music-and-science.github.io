@@ -117,7 +117,12 @@
     loadTrack(currentTrackIdx);
     initAudioPlayer();
     bindHeroInfoPanel();
-    animate();
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      renderer.render(scene, camera);
+    } else {
+      animate();
+    }
   }
 
   function bindHeroInfoPanel() {
@@ -414,9 +419,11 @@
     if (isPlaying) {
       playIcon.style.display = 'none';
       pauseIcon.style.display = '';
+      playBtn.setAttribute('aria-label', 'Pause');
     } else {
       playIcon.style.display = '';
       pauseIcon.style.display = 'none';
+      playBtn.setAttribute('aria-label', 'Play');
     }
   }
 
