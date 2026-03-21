@@ -1,6 +1,6 @@
 ---
 title: "Harin Lee"
-role: "Postdoc"
+role: "Junior Research Fellow"
 email: "hl744@cam.ac.uk"
 image: "/images/people/harin-lee.png"
 weight: 3

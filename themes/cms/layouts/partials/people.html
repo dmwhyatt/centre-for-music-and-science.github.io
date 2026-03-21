@@ -3,9 +3,11 @@
     <h2 class="section-title">People</h2>
     <div class="people-grid">
       {{ $people := where .Site.RegularPages "Section" "people" }}
-      {{ $featured := where $people "Params.weight" "le" 3 }}
-      {{ $phds := where $people "Params.role" "PhD Student" }}
-      {{ range sort ($featured | union $phds) "Params.weight" }}
+      {{ $shown := where $people "Params.category" "ne" "alumni" }}
+      {{ $affiliates := where $shown "Params.category" "eq" "affiliate" }}
+      {{ $nonAffiliates := where $shown "Params.category" "ne" "affiliate" }}
+      {{ $ordered := sort $nonAffiliates "Params.weight" | append (sort $affiliates "Params.weight") }}
+      {{ range $ordered }}
       <a href="{{ .RelPermalink }}" class="person-card">
         <div class="person-photo">
           {{ if .Params.image }}
