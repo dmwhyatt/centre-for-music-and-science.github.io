@@ -38,6 +38,31 @@ a {
   text-decoration: none;
 }
 
+/* Body copy: global `a` reset keeps nav/cards clean; restore link affordance in prose. */
+.single-page .content a,
+.list-page .content a,
+.person-page-bio a,
+.group-detail-body a,
+.dataset-detail-body a,
+.event-detail-content a,
+.project-detail-body a,
+.facility-description a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.single-page .content a:hover,
+.list-page .content a:hover,
+.person-page-bio a:hover,
+.group-detail-body a:hover,
+.dataset-detail-body a:hover,
+.event-detail-content a:hover,
+.project-detail-body a:hover,
+.facility-description a:hover {
+  color: var(--color-text);
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -1133,6 +1158,19 @@ img {
   max-width: var(--container-max);
   margin: 0 auto 0;
   padding: 0 24px 24px;
+}
+
+.fpub-cite a,
+.fpub-desc a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255, 255, 255, 0.65);
+}
+
+.fpub-cite a:hover,
+.fpub-desc a:hover {
+  text-decoration-color: #fff;
 }
 
 .pub-list-legend {
