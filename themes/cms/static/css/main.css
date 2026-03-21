@@ -116,6 +116,14 @@ img {
 .site-logo {
   display: flex;
   align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.site-logo--visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .logo-img {

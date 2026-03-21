@@ -28,6 +28,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Show nav logo only after the hero banner logo scrolls out of view.
+  // On pages without a hero, the logo is always visible.
+  var siteLogo = document.querySelector('.site-logo');
+  var heroLogo = document.querySelector('.hero-lab-logo-watermark');
+  if (siteLogo) {
+    if (heroLogo && typeof IntersectionObserver !== 'undefined') {
+      new IntersectionObserver(function (entries) {
+        siteLogo.classList.toggle('site-logo--visible', !entries[0].isIntersecting);
+      }).observe(heroLogo);
+    } else {
+      siteLogo.classList.add('site-logo--visible');
+    }
+  }
+
   // Mobile nav toggle
   var toggle = document.querySelector('.nav-toggle');
   var navLinks = document.querySelector('.nav-links');
