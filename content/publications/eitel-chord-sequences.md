@@ -3,7 +3,8 @@ title: Perception of chord sequences modeled with prediction by partial matching
   voice-leading distance, and spectral pitch-class similarity
 date: 2024-01-01
 # generated from bibtex; do not edit manually
-authors: Eitel, M., Ruth, N., Harrison, P. M. C., Frieler, K., & Müllensiefen, D.
+authors: Eitel, M., Ruth, N., Harrison, P. M. C., Frieler, K., & M{\"u}llensiefen,
+  D.
 journal: Music & Science
 doi: https://doi.org/10.1177/20592043241257654
 abstract: The perception of harmony has been the subject of many studies in the research
@@ -34,8 +35,19 @@ bibtex: |-
     doi = {10.1177/20592043241257654}
   }
 # generated from bibtex; do not edit manually
-citation_apa: Eitel, M., Ruth, N., Harrison, P. M. C., Frieler, K., & Müllensiefen,
+citation_apa: Eitel, M., Ruth, N., Harrison, P. M. C., Frieler, K., & M{\"u}llensiefen,
   D. (2024). Perception of chord sequences modeled with prediction by partial matching,
   voice-leading distance, and spectral pitch-class similarity. <em>Music & Science</em>.
   https://doi.org/10.1177/20592043241257654
+citation_mla: Eitel, M., et al.. “Perception of Chord Sequences Modeled with Prediction
+  by Partial Matching, Voice-leading Distance, and Spectral Pitch-class Similarity”.
+  <em>Music & Science</em>, 2024, https://doi.org/10.1177/20592043241257654.
+citation_chicago: Eitel, M., N. Ruth, P. M. C. Harrison, K. Frieler, and D. M{\"u}llensiefen.
+  2024. “Perception of Chord Sequences Modeled with Prediction by Partial Matching,
+  Voice-leading Distance, and Spectral Pitch-class Similarity”. <em>Music & Science</em>.
+  https://doi.org/10.1177/20592043241257654.
+citation_ieee: '[1] M. Eitel, N. Ruth, P. M. C. Harrison, K. Frielerand D. M{\"u}llensiefen,
+  “Perception of chord sequences modeled with prediction by partial matching, voice-leading
+  distance, and spectral pitch-class similarity”, <em>Music & Science</em>, 2024,
+  doi: 10.1177/20592043241257654.'
 ---

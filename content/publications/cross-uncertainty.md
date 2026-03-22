@@ -36,6 +36,12 @@ bibtex: |-
     doi = {10.1177/10298649231197388}
   }
 # generated from bibtex; do not edit manually
-citation_apa: 'Cross, I. (2023). Sharing uncertainty: music in humanistic and scientific
+citation_apa: 'Cross, I. (2023). Sharing uncertainty: Music in humanistic and scientific
   understandings. <em>Musicae Scientiae</em>. https://doi.org/10.1177/10298649231197388'
+citation_mla: 'Cross, I. “Sharing Uncertainty: Music in Humanistic and Scientific
+  Understandings”. <em>Musicae Scientiae</em>, 2023, https://doi.org/10.1177/10298649231197388.'
+citation_chicago: 'Cross, I. 2023. “Sharing Uncertainty: Music in Humanistic and Scientific
+  Understandings”. <em>Musicae Scientiae</em>. https://doi.org/10.1177/10298649231197388.'
+citation_ieee: '[1] I. Cross, “Sharing uncertainty: Music in humanistic and scientific
+  understandings”, <em>Musicae Scientiae</em>, 2023, doi: 10.1177/10298649231197388.'
 ---

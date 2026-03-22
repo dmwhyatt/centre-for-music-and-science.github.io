@@ -30,6 +30,12 @@ bibtex: |-
     doi = {10.1177/03057356231221958}
   }
 # generated from bibtex; do not edit manually
-citation_apa: 'Zhang, X. (2024). Tones shape notes: the realisation of lexical tones
-  in chaozhou songs. <em>Psychology of Music</em>. https://doi.org/10.1177/03057356231221958'
+citation_apa: 'Zhang, X. (2024). Tones shape notes: The realisation of lexical tones
+  in Chaozhou songs. <em>Psychology of Music</em>. https://doi.org/10.1177/03057356231221958'
+citation_mla: 'Zhang, X. “Tones Shape Notes: The Realisation of Lexical Tones in Chaozhou
+  Songs”. <em>Psychology of Music</em>, 2024, https://doi.org/10.1177/03057356231221958.'
+citation_chicago: 'Zhang, X. 2024. “Tones Shape Notes: The Realisation of Lexical
+  Tones in Chaozhou Songs”. <em>Psychology of Music</em>. https://doi.org/10.1177/03057356231221958.'
+citation_ieee: '[1] X. Zhang, “Tones shape notes: The realisation of lexical tones
+  in Chaozhou songs”, <em>Psychology of Music</em>, 2024, doi: 10.1177/03057356231221958.'
 ---

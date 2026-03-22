@@ -29,4 +29,11 @@ bibtex: |-
 # generated from bibtex; do not edit manually
 citation_apa: Tchernichovski, O., Globerson, E., Harrison, P. M. C., & Jacoby, N.
   (2025). How constraints on editing affects cultural evolution. <em>arXiv</em>. https://doi.org/10.48550/arXiv.2502.16694
+citation_mla: Tchernichovski, O., et al.. “How Constraints on Editing Affects Cultural
+  Evolution”. <em>arXiv</em>, 2025, https://doi.org/10.48550/arXiv.2502.16694.
+citation_chicago: Tchernichovski, O., E. Globerson, P. M. C. Harrison, and N. Jacoby.
+  2025. “How Constraints on Editing Affects Cultural Evolution”. <em>arXiv</em>. https://doi.org/10.48550/arXiv.2502.16694.
+citation_ieee: '[1] O. Tchernichovski, E. Globerson, P. M. C. Harrisonand N. Jacoby,
+  “How constraints on editing affects cultural evolution”, <em>arXiv</em>, 2025, doi:
+  10.48550/arXiv.2502.16694.'
 ---

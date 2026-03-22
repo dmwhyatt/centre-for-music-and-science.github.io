@@ -34,4 +34,12 @@ bibtex: |-
 citation_apa: Jimenez, I., Kuusi, T., Ojala, J., & Harrison, P. M. C. (2025). The
   effect of chord duration on the relative salience of chord-type and voicing changes.
   <em>Psychology of Music</em>. https://doi.org/10.1177/03057356241247533
+citation_mla: Jimenez, I., et al.. “The Effect of Chord Duration on the Relative Salience
+  of Chord-type and Voicing Changes”. <em>Psychology of Music</em>, 2025, https://doi.org/10.1177/03057356241247533.
+citation_chicago: Jimenez, I., T. Kuusi, J. Ojala, and P. M. C. Harrison. 2025. “The
+  Effect of Chord Duration on the Relative Salience of Chord-type and Voicing Changes”.
+  <em>Psychology of Music</em>. https://doi.org/10.1177/03057356241247533.
+citation_ieee: '[1] I. Jimenez, T. Kuusi, J. Ojalaand P. M. C. Harrison, “The effect
+  of chord duration on the relative salience of chord-type and voicing changes”, <em>Psychology
+  of Music</em>, 2025, doi: 10.1177/03057356241247533.'
 ---

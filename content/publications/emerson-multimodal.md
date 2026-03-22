@@ -40,4 +40,13 @@ bibtex: |-
 citation_apa: Emerson, K., & Harrison, P. M. C. (2025). Multimodal datasets for studying
   expert performances of musical scores. <em>Transactions of the International Society
   for Music Information Retrieval</em>. https://doi.org/10.5334/tismir.230
+citation_mla: Emerson, K. and P. M. C. Harrison. “Multimodal Datasets for Studying
+  Expert Performances of Musical Scores”. <em>Transactions of the International Society
+  for Music Information Retrieval</em>, 2025, https://doi.org/10.5334/tismir.230.
+citation_chicago: Emerson, K., and P. M. C. Harrison. 2025. “Multimodal Datasets for
+  Studying Expert Performances of Musical Scores”. <em>Transactions of the International
+  Society for Music Information Retrieval</em>. https://doi.org/10.5334/tismir.230.
+citation_ieee: '[1] K. Emerson and P. M. C. Harrison, “Multimodal datasets for studying
+  expert performances of musical scores”, <em>Transactions of the International Society
+  for Music Information Retrieval</em>, 2025, doi: 10.5334/tismir.230.'
 ---

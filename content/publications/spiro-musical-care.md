@@ -3,8 +3,10 @@ title: 'Perspectives on musical care throughout the life course: Introducing the
   Care International Network'
 date: 2023-01-01
 # generated from bibtex; do not edit manually
-authors: Spiro, N., Sanfilippo, K. R. M., McConnell, B. B., Pike-Rowney, G., Bonini
-  Baraldi, F., Brabec, B., … de Wit, K.
+authors: Spiro, N., Sanfilippo, K. R. M., McConnell, B. B., Pike-Rowney, G., {Bonini
+  Baraldi}, F., Brabec, B., {Van Buren}, K., Camlin, D., Cardoso, T. M., {\c{C}}ifdal{\"o}z,
+  B. U., Cross, I., Dumbauld, B., Ettenberger, M., Falkenberg, K., Fouch{\'e}, S.,
+  Frid, E., Gosine, J., Graham-Jackson, A. L., Grahn, J. A., … {de Wit}, K.
 journal: Musicae Scientiae
 doi: https://doi.org/10.1177/20592043231200553
 abstract: 'In this paper we report on the inaugural meetings of the Musical Care International
@@ -41,7 +43,19 @@ bibtex: |-
   }
 # generated from bibtex; do not edit manually
 citation_apa: 'Spiro, N., Sanfilippo, K. R. M., McConnell, B. B., Pike-Rowney, G.,
-  Bonini Baraldi, F., Brabec, B., … de Wit, K. (2023). Perspectives on musical care
-  throughout the life course: introducing the musical care international network.
-  <em>Musicae Scientiae</em>. https://doi.org/10.1177/20592043231200553'
+  {Bonini Baraldi}, F., Brabec, B., {Van Buren}, K., Camlin, D., Cardoso, T. M., {\c{C}}ifdal{\"o}z,
+  B. U., Cross, I., Dumbauld, B., Ettenberger, M., Falkenberg, K., Fouch{\''e}, S.,
+  Frid, E., Gosine, J., Graham-Jackson, A. L., Grahn, J. A., … {de Wit}, K. (2023).
+  Perspectives on musical care throughout the life course: Introducing the Musical
+  Care International Network. <em>Musicae Scientiae</em>. https://doi.org/10.1177/20592043231200553'
+citation_mla: 'Spiro, N., et al.. “Perspectives on Musical Care Throughout the Life
+  Course: Introducing the Musical Care International Network”. <em>Musicae Scientiae</em>,
+  2023, https://doi.org/10.1177/20592043231200553.'
+citation_chicago: 'Spiro, N., K. R. M. Sanfilippo, B. B. McConnell, G. Pike-Rowney,
+  F. {Bonini Baraldi}, B. Brabec, K. {Van Buren}, et al.. 2023. “Perspectives on Musical
+  Care Throughout the Life Course: Introducing the Musical Care International Network”.
+  <em>Musicae Scientiae</em>. https://doi.org/10.1177/20592043231200553.'
+citation_ieee: '[1] N. Spiro, “Perspectives on musical care throughout the life course:
+  Introducing the Musical Care International Network”, <em>Musicae Scientiae</em>,
+  2023, doi: 10.1177/20592043231200553.'
 ---

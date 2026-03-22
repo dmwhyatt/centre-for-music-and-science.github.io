@@ -29,8 +29,17 @@ bibtex: |-
     url = {https://www.qmul.ac.uk/dmrn/media/dmrn/DMRN-20-Abstracts-15-Dec.pdf}
   }
 # generated from bibtex; do not edit manually
-citation_apa: 'Whyatt, D. M., & Harrison, P. M. C. (2025). Melody-features: a python
-  package for symbolic melody analysis. <em>Conference: Digital Music Research Network
+citation_apa: 'Whyatt, D. M., & Harrison, P. M. C. (2025). melody-features: A Python
+  Package for Symbolic Melody Analysis. <em>Conference: Digital Music Research Network
   20</em>. https://www.qmul.ac.uk/dmrn/media/dmrn/DMRN-20-Abstracts-15-Dec.pdf'
+citation_mla: 'Whyatt, D. M. and P. M. C. Harrison. “Melody-features: A Python Package
+  for Symbolic Melody Analysis”. <em>Conference: Digital Music Research Network 20</em>,
+  2025, https://www.qmul.ac.uk/dmrn/media/dmrn/DMRN-20-Abstracts-15-Dec.pdf.'
+citation_chicago: 'Whyatt, D. M., and P. M. C. Harrison. 2025. “Melody-features: A
+  Python Package for Symbolic Melody Analysis”. <em>Conference: Digital Music Research
+  Network 20</em>. https://www.qmul.ac.uk/dmrn/media/dmrn/DMRN-20-Abstracts-15-Dec.pdf.'
+citation_ieee: '[1] D. M. Whyatt and P. M. C. Harrison, “melody-features: A Python
+  Package for Symbolic Melody Analysis”, <em>Conference: Digital Music Research Network
+  20</em>, 2025, [Online]. Available: https://www.qmul.ac.uk/dmrn/media/dmrn/DMRN-20-Abstracts-15-Dec.pdf'
 ---
 

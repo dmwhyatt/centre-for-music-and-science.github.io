@@ -23,5 +23,11 @@ bibtex: |-
   }
 # generated from bibtex; do not edit manually
 citation_apa: Zhang, X., & Cross, I. (2024). Singers' realizations of linguistic tone
-  in chaozhou song. <em>Ethnomusicology</em>. https://doi.org/10.5406/21567417.68.2.06
+  in Chaozhou song. <em>Ethnomusicology</em>. https://doi.org/10.5406/21567417.68.2.06
+citation_mla: Zhang, X. and I. Cross. “Singers' Realizations of Linguistic Tone in
+  Chaozhou Song”. <em>Ethnomusicology</em>, 2024, https://doi.org/10.5406/21567417.68.2.06.
+citation_chicago: Zhang, X., and I. Cross. 2024. “Singers' Realizations of Linguistic
+  Tone in Chaozhou Song”. <em>Ethnomusicology</em>. https://doi.org/10.5406/21567417.68.2.06.
+citation_ieee: '[1] X. Zhang and I. Cross, “Singers'' realizations of linguistic tone
+  in Chaozhou song”, <em>Ethnomusicology</em>, 2024, doi: 10.5406/21567417.68.2.06.'
 ---

@@ -3,8 +3,8 @@ title: 'The associations between music training, musical working memory, and vis
   working memory: an opportunity for causal modeling'
 date: 2022-01-01
 # generated from bibtex; do not edit manually
-authors: Silas, S., Müllensiefen, D., Gelding, R., Frieler, K., & Harrison, P. M.
-  C.
+authors: Silas, S., M{\"u}llensiefen, D., Gelding, R., Frieler, K., & Harrison, P.
+  M. C.
 journal: Music Perception
 doi: https://doi.org/10.1525/mp.2022.39.4.401
 abstract: 'Prior research studying the relationship between music training (MT) and
@@ -33,8 +33,19 @@ bibtex: |-
     doi = {10.1525/mp.2022.39.4.401}
   }
 # generated from bibtex; do not edit manually
-citation_apa: 'Silas, S., Müllensiefen, D., Gelding, R., Frieler, K., & Harrison,
+citation_apa: 'Silas, S., M{\"u}llensiefen, D., Gelding, R., Frieler, K., & Harrison,
   P. M. C. (2022). The associations between music training, musical working memory,
   and visuospatial working memory: an opportunity for causal modeling. <em>Music Perception</em>.
   https://doi.org/10.1525/mp.2022.39.4.401'
+citation_mla: 'Silas, S., et al.. “The Associations Between Music Training, Musical
+  Working Memory, and Visuospatial Working Memory: An Opportunity for Causal Modeling”.
+  <em>Music Perception</em>, 2022, https://doi.org/10.1525/mp.2022.39.4.401.'
+citation_chicago: 'Silas, S., D. M{\"u}llensiefen, R. Gelding, K. Frieler, and P.
+  M. C. Harrison. 2022. “The Associations Between Music Training, Musical Working
+  Memory, and Visuospatial Working Memory: An Opportunity for Causal Modeling”. <em>Music
+  Perception</em>. https://doi.org/10.1525/mp.2022.39.4.401.'
+citation_ieee: '[1] S. Silas, D. M{\"u}llensiefen, R. Gelding, K. Frielerand P. M.
+  C. Harrison, “The associations between music training, musical working memory, and
+  visuospatial working memory: an opportunity for causal modeling”, <em>Music Perception</em>,
+  2022, doi: 10.1525/mp.2022.39.4.401.'
 ---

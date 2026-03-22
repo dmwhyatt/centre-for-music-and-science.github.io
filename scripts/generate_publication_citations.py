@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import html
 import re
 from pathlib import Path
@@ -18,19 +19,57 @@ except ImportError as exc:  # pragma: no cover - import guard for CLI usage.
     ) from exc
 
 try:
-    from pybtex.database import parse_string
-    from pybtex.plugin import find_plugin
+    from citeproc import Citation
+    from citeproc import CitationItem
+    from citeproc import CitationStylesBibliography
+    from citeproc import CitationStylesStyle
+    from citeproc import formatter
+    from citeproc.source.json import CiteProcJSON
 except ImportError as exc:  # pragma: no cover - import guard for CLI usage.
     raise ImportError(
-        "pybtex and pybtex-apa-style are required. "
-        "Install them with: pip install pybtex pybtex-apa-style"
+        "citeproc-py and citeproc-py-styles are required. "
+        "Install them with: pip install citeproc-py citeproc-py-styles"
+    ) from exc
+
+try:
+    from pybtex.database import parse_string
+except ImportError as exc:  # pragma: no cover - import guard for CLI usage.
+    raise ImportError(
+        "pybtex is required. Install it with: pip install pybtex"
     ) from exc
 
 
 FRONT_MATTER_RE = re.compile(r"\A---\n(.*?)\n---\n?", re.DOTALL)
 FIELD_RE = re.compile(r"(\w+)\s*=\s*\{([^{}]*)\}|(\w+)\s*=\s*\"([^\"]*)\"")
 AUTOGEN_COMMENT = "# generated from bibtex; do not edit manually"
-AUTOGEN_FIELDS = ("citation_apa", "authors", "journal", "doi")
+AUTOGEN_FIELDS = (
+    "citation_apa",
+    "citation_mla",
+    "citation_chicago",
+    "citation_ieee",
+    "authors",
+    "journal",
+    "doi",
+)
+CSL_STYLE_MAP = {
+    "citation_apa": "apa",
+    "citation_mla": "modern-language-association",
+    "citation_chicago": "chicago-author-date",
+    "citation_ieee": "ieee",
+}
+ENTRY_TYPE_MAP = {
+    "article": "article-journal",
+    "book": "book",
+    "inbook": "chapter",
+    "incollection": "chapter",
+    "inproceedings": "paper-conference",
+    "conference": "paper-conference",
+    "proceedings": "book",
+    "mastersthesis": "thesis",
+    "phdthesis": "thesis",
+    "techreport": "report",
+    "misc": "article",
+}
 
 
 class PublicationDumper(yaml.SafeDumper):
@@ -97,27 +136,15 @@ def publication_link(fields: Dict[str, str]) -> str:
     return normalize_doi(doi_raw)
 
 
-def normalize_pybtex_html(citation_html: str) -> str:
-    """Normalize pybtex HTML output for front matter storage."""
+def normalize_citeproc_html(citation_html: str) -> str:
+    """Normalize citeproc HTML output for front matter storage."""
     citation_html = html.unescape(citation_html)
+    citation_html = citation_html.replace("<i>", "<em>").replace("</i>", "</em>")
+    citation_html = citation_html.replace("<b>", "").replace("</b>", "")
     citation_html = citation_html.replace("\xa0", " ")
-    citation_html = re.sub(
-        r'<span class="bibtex-protected">([^<]*)</span>',
-        r"\1",
-        citation_html,
-    )
-    citation_html = re.sub(
-        r'<a\s+href="(https?://doi\.org/[^"]+)">[^<]*</a>',
-        r"\1",
-        citation_html,
-        flags=re.IGNORECASE,
-    )
-    citation_html = re.sub(
-        r'URL:\s*<a\s+href="([^"]+)">\s*\1\s*</a>',
-        r"\1",
-        citation_html,
-        flags=re.IGNORECASE,
-    )
+    citation_html = re.sub(r"([A-Z])\.\.", r"\1.", citation_html)
+    citation_html = re.sub(r"(?<=\.)and\b", " and", citation_html)
+    citation_html = re.sub(r"^\[(\d+)\](?=\S)", r"[\1] ", citation_html)
     citation_html = re.sub(r"\s+", " ", citation_html).strip()
     return citation_html
 
@@ -128,22 +155,116 @@ def extract_authors_from_apa_citation(citation_apa: str) -> str:
     return match.group(1).strip() if match else ""
 
 
-def render_apa_citation(
-    bibtex: str,
-) -> str:
-    """Render an APA citation from BibTeX via pybtex."""
-    bibliography = parse_string(bibtex, "bibtex")
-    style = find_plugin("pybtex.style.formatting", "apa")()
-    backend = find_plugin("pybtex.backends", "html")()
-    entries = list(style.format_bibliography(bibliography))
-    if not entries:
-        raise ValueError("No bibliography entry found in BibTeX.")
-    return normalize_pybtex_html(entries[0].text.render(backend))
-
-
 def extract_publication_venue(fields: Dict[str, str]) -> str:
     """Extract journal/booktitle venue for list-style rendering."""
     return fields.get("journal", fields.get("booktitle", "")).strip()
+
+
+def year_from_front_matter(date_value: object) -> str:
+    """Extract a 4-digit year from YAML date front matter values."""
+    if date_value is None:
+        return ""
+    if isinstance(date_value, (dt.date, dt.datetime)):
+        return str(date_value.year)
+    text = str(date_value).strip()
+    match = re.match(r"^(\d{4})", text)
+    return match.group(1) if match else ""
+
+
+def first_bibtex_entry_data(bibtex: str):
+    """Get the first pybtex entry key and object from a BibTeX blob."""
+    bibliography = parse_string(bibtex, "bibtex")
+    if not bibliography.entries:
+        raise ValueError("No bibliography entry found in BibTeX.")
+    entry_key, entry = next(iter(bibliography.entries.items()))
+    return entry_key, entry
+
+
+def entry_type_to_csl(entry_type: str) -> str:
+    """Map BibTeX entry types to CSL item types."""
+    return ENTRY_TYPE_MAP.get(entry_type.lower(), "article")
+
+
+def person_to_csl_name(person) -> Dict[str, str]:
+    """Convert a pybtex person object into a CSL name object."""
+    family = " ".join(
+        person.prelast_names + person.last_names + person.lineage_names
+    ).strip()
+    given = " ".join(person.first_names + person.middle_names).strip()
+    name: Dict[str, str] = {}
+    if family:
+        name["family"] = family
+    if given:
+        name["given"] = given
+    return name
+
+
+def bibtex_to_csl_item(
+    bibtex: str,
+    link: str,
+    inpress: bool,
+    year: str,
+) -> Tuple[str, Dict]:
+    """Convert one BibTeX entry into CSL-JSON item data."""
+    entry_key, entry = first_bibtex_entry_data(bibtex)
+    fields = entry.fields
+
+    item: Dict = {
+        "id": entry_key,
+        "type": entry_type_to_csl(entry.type),
+        "title": fields.get("title", ""),
+    }
+
+    authors = [person_to_csl_name(p) for p in entry.persons.get("author", [])]
+    authors = [a for a in authors if a]
+    if authors:
+        item["author"] = authors
+
+    venue = fields.get("journal", fields.get("booktitle", "")).strip()
+    if venue:
+        item["container-title"] = venue
+
+    effective_year = year.strip()
+    if not effective_year:
+        year_match = re.search(r"\d{4}", fields.get("year", ""))
+        effective_year = year_match.group(0) if year_match else ""
+    if effective_year:
+        item["issued"] = {"date-parts": [[int(effective_year)]]}
+
+    doi_raw = fields.get("doi", "").strip()
+    doi_norm = normalize_doi(doi_raw)
+    if doi_norm:
+        item["DOI"] = doi_norm.removeprefix("https://doi.org/")
+
+    if link:
+        item["URL"] = link
+
+    if inpress:
+        item["status"] = "forthcoming"
+
+    return entry_key, item
+
+
+def render_csl_citation(
+    bibtex: str,
+    csl_style: str,
+    link: str,
+    inpress: bool,
+    year: str,
+) -> str:
+    """Render a single citation with citeproc and a CSL style name."""
+    entry_key, csl_item = bibtex_to_csl_item(
+        bibtex=bibtex,
+        link=link,
+        inpress=inpress,
+        year=year,
+    )
+    source = CiteProcJSON([csl_item])
+    style = CitationStylesStyle(csl_style, validate=False)
+    bibliography = CitationStylesBibliography(style, source, formatter.html)
+    bibliography.register(Citation([CitationItem(entry_key)]))
+    rendered = str(bibliography.bibliography()[0])
+    return normalize_citeproc_html(rendered)
 
 
 def build_front_matter_text(data: Dict) -> str:
@@ -186,13 +307,30 @@ def update_publication_file(path: Path) -> bool:
         return False
 
     fields = parse_bibtex_fields(bibtex)
-    citation_apa = render_apa_citation(bibtex)
-    front_matter["citation_apa"] = citation_apa
-    front_matter["authors"] = extract_authors_from_apa_citation(citation_apa)
     venue = extract_publication_venue(fields)
     if venue:
         front_matter["journal"] = venue
-    front_matter["doi"] = publication_link(fields)
+
+    link = publication_link(fields)
+    front_matter["doi"] = link
+
+    year = year_from_front_matter(front_matter.get("date")) or fields.get(
+        "year", ""
+    ).strip()
+    inpress = bool(front_matter.get("inpress", False))
+
+    for citation_key, csl_style in CSL_STYLE_MAP.items():
+        front_matter[citation_key] = render_csl_citation(
+            bibtex=bibtex,
+            csl_style=csl_style,
+            link=link,
+            inpress=inpress,
+            year=year,
+        )
+
+    front_matter["authors"] = extract_authors_from_apa_citation(
+        front_matter["citation_apa"]
+    )
 
     updated = build_front_matter_text(front_matter) + body
     if updated == original:
@@ -206,7 +344,7 @@ def main() -> int:
     """Run citation generation for publication markdown files."""
     parser = argparse.ArgumentParser(
         description=(
-            "Generate citation_apa and doi from publication BibTeX fields."
+            "Generate citation fields and doi from publication BibTeX fields."
         )
     )
     parser.add_argument(

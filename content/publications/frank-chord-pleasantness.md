@@ -42,4 +42,13 @@ citation_apa: Frank, J., & Harrison, P. M. C. (2026). Modeling individual differ
 authors: Frank, J., & Harrison, P. M. C.
 journal: Psychology of Aesthetics, Creativity, and the Arts
 doi: https://doi.org/10.1037/aca0000836
+citation_mla: Frank, J. and P. M. C. Harrison. “Modeling Individual Differences in
+  Chord Pleasantness Judgments”. <em>Psychology of Aesthetics, Creativity, and the
+  Arts</em>, 2026, https://doi.org/10.1037/aca0000836.
+citation_chicago: Frank, J., and P. M. C. Harrison. 2026. “Modeling Individual Differences
+  in Chord Pleasantness Judgments”. <em>Psychology of Aesthetics, Creativity, and
+  the Arts</em>. https://doi.org/10.1037/aca0000836.
+citation_ieee: '[1] J. Frank and P. M. C. Harrison, “Modeling individual differences
+  in chord pleasantness judgments”, <em>Psychology of Aesthetics, Creativity, and
+  the Arts</em>, 2026, doi: 10.1037/aca0000836.'
 ---

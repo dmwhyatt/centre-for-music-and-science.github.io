@@ -20,4 +20,13 @@ bibtex: |-
 citation_apa: Sanders, S., & Harrison, P. M. C. (2022). A case study investigating
   the interaction between tuba acoustic radiation patterns and performance spaces.
   <em>Audio Engineering Society Convention 153</em>. https://www.aes.org/e-lib/browse.cfm?elib=21924
+citation_mla: Sanders, S. and P. M. C. Harrison. “A Case Study Investigating the Interaction
+  Between Tuba Acoustic Radiation Patterns and Performance Spaces”. <em>Audio Engineering
+  Society Convention 153</em>, 2022, https://www.aes.org/e-lib/browse.cfm?elib=21924.
+citation_chicago: Sanders, S., and P. M. C. Harrison. 2022. “A Case Study Investigating
+  the Interaction Between Tuba Acoustic Radiation Patterns and Performance Spaces”.
+  <em>Audio Engineering Society Convention 153</em>. https://www.aes.org/e-lib/browse.cfm?elib=21924.
+citation_ieee: '[1] S. Sanders and P. M. C. Harrison, “A case study investigating
+  the interaction between tuba acoustic radiation patterns and performance spaces”,
+  <em>Audio Engineering Society Convention 153</em>, 2022, [Online]. Available: https://www.aes.org/e-lib/browse.cfm?elib=21924'
 ---

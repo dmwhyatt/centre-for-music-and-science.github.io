@@ -42,4 +42,13 @@ bibtex: |-
 citation_apa: Anglada-Tort, M., Harrison, P. M. C., Lee, H., & Jacoby, N. (2023).
   Large-scale iterated singing experiments reveal oral transmission mechanisms underlying
   music evolution. <em>Current Biology</em>. https://doi.org/10.1016/j.cub.2023.02.070
+citation_mla: Anglada-Tort, M., et al.. “Large-scale Iterated Singing Experiments
+  Reveal Oral Transmission Mechanisms Underlying Music Evolution”. <em>Current Biology</em>,
+  2023, https://doi.org/10.1016/j.cub.2023.02.070.
+citation_chicago: Anglada-Tort, M., P. M. C. Harrison, H. Lee, and N. Jacoby. 2023.
+  “Large-scale Iterated Singing Experiments Reveal Oral Transmission Mechanisms Underlying
+  Music Evolution”. <em>Current Biology</em>. https://doi.org/10.1016/j.cub.2023.02.070.
+citation_ieee: '[1] M. Anglada-Tort, P. M. C. Harrison, H. Leeand N. Jacoby, “Large-scale
+  iterated singing experiments reveal oral transmission mechanisms underlying music
+  evolution”, <em>Current Biology</em>, 2023, doi: 10.1016/j.cub.2023.02.070.'
 ---

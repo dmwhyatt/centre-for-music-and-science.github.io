@@ -32,6 +32,14 @@ bibtex: |-
   }
 # generated from bibtex; do not edit manually
 citation_apa: Jimenez, I., Kuusi, T., Ojala, J., Czedik-Eysenberg, I., Harrison, P.
-  M. C., & Chander, A. (2025). Effect of timbre on goodness-of-fit ratings of short
+  M. C., & Chander, A. (2025). Effect of timbre on Goodness-of-Fit ratings of short
   chord sequences. <em>Music Perception</em>. https://doi.org/10.1525/mp.2025.2397481
+citation_mla: Jimenez, I., et al.. “Effect of Timbre on Goodness-of-Fit Ratings of
+  Short Chord Sequences”. <em>Music Perception</em>, 2025, https://doi.org/10.1525/mp.2025.2397481.
+citation_chicago: Jimenez, I., T. Kuusi, J. Ojala, I. Czedik-Eysenberg, P. M. C. Harrison,
+  and A. Chander. 2025. “Effect of Timbre on Goodness-of-Fit Ratings of Short Chord
+  Sequences”. <em>Music Perception</em>. https://doi.org/10.1525/mp.2025.2397481.
+citation_ieee: '[1] I. Jimenez, T. Kuusi, J. Ojala, I. Czedik-Eysenberg, P. M. C.
+  Harrisonand A. Chander, “Effect of timbre on Goodness-of-Fit ratings of short chord
+  sequences”, <em>Music Perception</em>, 2025, doi: 10.1525/mp.2025.2397481.'
 ---

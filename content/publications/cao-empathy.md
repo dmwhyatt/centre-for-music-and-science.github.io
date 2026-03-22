@@ -20,6 +20,15 @@ bibtex: |-
   }
 # generated from bibtex; do not edit manually
 citation_apa: 'Cao, E. L., Blinderman, C. D., & Cross, I. (2022). Reconsidering empathy:
-  an interpersonal approach and participatory arts in the medical humanities. <em>The
+  An interpersonal approach and participatory arts in the medical humanities. <em>The
   Medical/Health Humanities-Politics, Programs, and Pedagogies</em>. https://doi.org/10.1007/978-3-031-19227-2_8'
+citation_mla: 'Cao, E. L., et al.. “Reconsidering Empathy: An Interpersonal Approach
+  and Participatory Arts in the Medical Humanities”. <em>The Medical/Health Humanities-Politics,
+  Programs, and Pedagogies</em>, 2022, https://doi.org/10.1007/978-3-031-19227-2_8.'
+citation_chicago: 'Cao, E. L., C. D. Blinderman, and I. Cross. 2022. “Reconsidering
+  Empathy: An Interpersonal Approach and Participatory Arts in the Medical Humanities”.
+  <em>The Medical/Health Humanities-Politics, Programs, and Pedagogies</em>. https://doi.org/10.1007/978-3-031-19227-2_8.'
+citation_ieee: '[1] E. L. Cao, C. D. Blindermanand I. Cross, “Reconsidering empathy:
+  An interpersonal approach and participatory arts in the medical humanities”, <em>The
+  Medical/Health Humanities-Politics, Programs, and Pedagogies</em>, 2022, doi: 10.1007/978-3-031-19227-2_8.'
 ---

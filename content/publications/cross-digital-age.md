@@ -36,4 +36,10 @@ bibtex: |-
 # generated from bibtex; do not edit manually
 citation_apa: 'Cross, I. (2023). Music in the digital age: commodity, community, communion.
   <em>AI & Society</em>. https://doi.org/10.1007/s00146-023-01670-9'
+citation_mla: 'Cross, I. “Music in the Digital Age: Commodity, Community, Communion”.
+  <em>AI & Society</em>, 2023, https://doi.org/10.1007/s00146-023-01670-9.'
+citation_chicago: 'Cross, I. 2023. “Music in the Digital Age: Commodity, Community,
+  Communion”. <em>AI & Society</em>. https://doi.org/10.1007/s00146-023-01670-9.'
+citation_ieee: '[1] I. Cross, “Music in the digital age: commodity, community, communion”,
+  <em>AI & Society</em>, 2023, doi: 10.1007/s00146-023-01670-9.'
 ---

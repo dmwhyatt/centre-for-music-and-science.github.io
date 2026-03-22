@@ -32,6 +32,15 @@ bibtex: |-
   }
 # generated from bibtex; do not edit manually
 citation_apa: 'Robledo, J.-P., Cross, I., Boada-Bayona, L., & Demogeot, N. (2022).
-  Back to basics: a re-evaluation of the relevance of imprinting in the genesis of
-  bowlby''s attachment theory. <em>Frontiers in Psychology</em>. https://doi.org/10.3389/fpsyg.2022.1033746'
+  Back to basics: A re-evaluation of the relevance of imprinting in the genesis of
+  Bowlby''s attachment theory. <em>Frontiers in Psychology</em>. https://doi.org/10.3389/fpsyg.2022.1033746'
+citation_mla: 'Robledo, J.-P., et al.. “Back to Basics: A Re-evaluation of the Relevance
+  of Imprinting in the Genesis of Bowlby''s Attachment Theory”. <em>Frontiers in Psychology</em>,
+  2022, https://doi.org/10.3389/fpsyg.2022.1033746.'
+citation_chicago: 'Robledo, J.-P., I. Cross, L. Boada-Bayona, and N. Demogeot. 2022.
+  “Back to Basics: A Re-evaluation of the Relevance of Imprinting in the Genesis of
+  Bowlby''s Attachment Theory”. <em>Frontiers in Psychology</em>. https://doi.org/10.3389/fpsyg.2022.1033746.'
+citation_ieee: '[1] J.-P. Robledo, I. Cross, L. Boada-Bayonaand N. Demogeot, “Back
+  to basics: A re-evaluation of the relevance of imprinting in the genesis of Bowlby''s
+  attachment theory”, <em>Frontiers in Psychology</em>, 2022, doi: 10.3389/fpsyg.2022.1033746.'
 ---

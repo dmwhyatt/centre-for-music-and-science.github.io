@@ -2,8 +2,8 @@
 title: 'GlobalMood: A cross-cultural benchmark for music emotion recognition'
 date: 2025-01-01
 # generated from bibtex; do not edit manually
-authors: Lee, H., <span class="bibtex-protected">Ç</span>elen, E., Harrison, P. M.
-  C., Anglada-Tort, M., van Rijn, P., Park, M., … Jacoby, N.
+authors: Lee, H., {\c{C}}elen, E., Harrison, P. M. C., Anglada-Tort, M., {van Rijn},
+  P., Park, M., Sch{\"o}nwiesner, M., & Jacoby, N.
 journal: International Society for Music Information Retrieval Conference
 doi: https://doi.org/10.48550/arXiv.2505.09539
 abstract: 'Human annotations of mood in music are essential for music generation and
@@ -33,8 +33,18 @@ bibtex: |-
     doi = {10.48550/arXiv.2505.09539}
   }
 # generated from bibtex; do not edit manually
-citation_apa: 'Lee, H., <span class="bibtex-protected">Ç</span>elen, E., Harrison,
-  P. M. C., Anglada-Tort, M., van Rijn, P., Park, M., … Jacoby, N. (2025). Globalmood:
-  a cross-cultural benchmark for music emotion recognition. <em>International Society
-  for Music Information Retrieval Conference</em>. https://doi.org/10.48550/arXiv.2505.09539'
+citation_apa: 'Lee, H., {\c{C}}elen, E., Harrison, P. M. C., Anglada-Tort, M., {van
+  Rijn}, P., Park, M., Sch{\"o}nwiesner, M., & Jacoby, N. (2025). GlobalMood: A cross-cultural
+  benchmark for music emotion recognition. <em>International Society for Music Information
+  Retrieval Conference</em>. https://doi.org/10.48550/arXiv.2505.09539'
+citation_mla: 'Lee, H., et al.. “GlobalMood: A Cross-cultural Benchmark for Music
+  Emotion Recognition”. <em>International Society for Music Information Retrieval
+  Conference</em>, 2025, https://doi.org/10.48550/arXiv.2505.09539.'
+citation_chicago: 'Lee, H., E. {\c{C}}elen, P. M. C. Harrison, M. Anglada-Tort, P.
+  {van Rijn}, M. Park, M. Sch{\"o}nwiesner, and N. Jacoby. 2025. “GlobalMood: A Cross-cultural
+  Benchmark for Music Emotion Recognition”. <em>International Society for Music Information
+  Retrieval Conference</em>. https://doi.org/10.48550/arXiv.2505.09539.'
+citation_ieee: '[1] H. Lee, “GlobalMood: A cross-cultural benchmark for music emotion
+  recognition”, <em>International Society for Music Information Retrieval Conference</em>,
+  2025, doi: 10.48550/arXiv.2505.09539.'
 ---

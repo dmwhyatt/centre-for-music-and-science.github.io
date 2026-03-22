@@ -33,4 +33,10 @@ bibtex: |-
 # generated from bibtex; do not edit manually
 citation_apa: Harrison, P. M. C., & MacConnachie, J. (2024). Consonance in the carillon.
   <em>Journal of the Acoustical Society of America</em>. https://doi.org/10.1121/10.0028167
+citation_mla: Harrison, P. M. C. and J. MacConnachie. “Consonance in the Carillon”.
+  <em>Journal of the Acoustical Society of America</em>, 2024, https://doi.org/10.1121/10.0028167.
+citation_chicago: Harrison, P. M. C., and J. MacConnachie. 2024. “Consonance in the
+  Carillon”. <em>Journal of the Acoustical Society of America</em>. https://doi.org/10.1121/10.0028167.
+citation_ieee: '[1] P. M. C. Harrison and J. MacConnachie, “Consonance in the carillon”,
+  <em>Journal of the Acoustical Society of America</em>, 2024, doi: 10.1121/10.0028167.'
 ---

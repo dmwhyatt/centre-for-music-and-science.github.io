@@ -1,0 +1,43 @@
+{{- $pub := . -}}
+<div class="tabs project-pub-cite-tabs" data-tab-group="publication-cite">
+  <div class="tab-bar" role="tablist" aria-label="Citation style">
+    <button type="button" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-cite-apa" data-tab="cite-apa" tabindex="0">APA</button>
+    <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-cite-mla" data-tab="cite-mla" tabindex="-1">MLA</button>
+    <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-cite-chicago" data-tab="cite-chicago" tabindex="-1">Chicago</button>
+    <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-cite-ieee" data-tab="cite-ieee" tabindex="-1">IEEE</button>
+    <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-cite-bibtex" data-tab="cite-bibtex" tabindex="-1">BibTeX</button>
+  </div>
+  <div id="panel-cite-apa" class="tab-panel active" role="tabpanel" aria-hidden="false">
+    <div class="project-publication-citation">{{ partial "publication-citation.html" $pub }}</div>
+  </div>
+  <div id="panel-cite-mla" class="tab-panel" role="tabpanel" aria-hidden="true">
+    <div class="project-publication-citation">
+      {{- with $pub.Params.citation_mla -}}
+        {{- . | safeHTML -}}
+      {{- else -}}
+        {{- partial "publication-citation.html" $pub -}}
+      {{- end -}}
+    </div>
+  </div>
+  <div id="panel-cite-chicago" class="tab-panel" role="tabpanel" aria-hidden="true">
+    <div class="project-publication-citation">
+      {{- with $pub.Params.citation_chicago -}}
+        {{- . | safeHTML -}}
+      {{- else -}}
+        {{- partial "publication-citation.html" $pub -}}
+      {{- end -}}
+    </div>
+  </div>
+  <div id="panel-cite-ieee" class="tab-panel" role="tabpanel" aria-hidden="true">
+    <div class="project-publication-citation">
+      {{- with $pub.Params.citation_ieee -}}
+        {{- . | safeHTML -}}
+      {{- else -}}
+        {{- partial "publication-citation.html" $pub -}}
+      {{- end -}}
+    </div>
+  </div>
+  <div id="panel-cite-bibtex" class="tab-panel" role="tabpanel" aria-hidden="true">
+    <pre class="project-pub-cite-bibtex"><code>{{ $pub.Params.bibtex | htmlEscape }}</code></pre>
+  </div>
+</div>

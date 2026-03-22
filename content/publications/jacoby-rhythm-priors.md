@@ -4,7 +4,9 @@ title: Commonality and variation in mental representations of music revealed by 
 date: 2024-01-01
 # generated from bibtex; do not edit manually
 authors: Jacoby, N., Polak, R., Grahn, J. A., Cameron, D. J., Lee, K. M., Godoy, R.,
-  … McDermott, J. H.
+  Undurraga, E. A., Huanca, T., Thalwitzer, T., Doumbia, N., Goldberg, D., Margulis,
+  E. H., Wong, P. C. M., Jure, L., Rocamora, M., Fujii, S., Savage, P. E., Ajimi,
+  J., Konno, R., … McDermott, J. H.
 journal: Nature Human Behaviour
 doi: https://doi.org/10.1038/s41562-023-01800-9
 abstract: |
@@ -19,7 +21,19 @@ bibtex: |-
   }
 # generated from bibtex; do not edit manually
 citation_apa: Jacoby, N., Polak, R., Grahn, J. A., Cameron, D. J., Lee, K. M., Godoy,
-  R., … McDermott, J. H. (2024). Commonality and variation in mental representations
+  R., Undurraga, E. A., Huanca, T., Thalwitzer, T., Doumbia, N., Goldberg, D., Margulis,
+  E. H., Wong, P. C. M., Jure, L., Rocamora, M., Fujii, S., Savage, P. E., Ajimi,
+  J., Konno, R., … McDermott, J. H. (2024). Commonality and variation in mental representations
   of music revealed by a cross-cultural comparison of rhythm priors in 15 countries.
   <em>Nature Human Behaviour</em>. https://doi.org/10.1038/s41562-023-01800-9
+citation_mla: Jacoby, N., et al.. “Commonality and Variation in Mental Representations
+  of Music Revealed by a Cross-cultural Comparison of Rhythm Priors in 15 Countries”.
+  <em>Nature Human Behaviour</em>, 2024, https://doi.org/10.1038/s41562-023-01800-9.
+citation_chicago: Jacoby, N., R. Polak, J. A. Grahn, D. J. Cameron, K. M. Lee, R.
+  Godoy, E. A. Undurraga, et al.. 2024. “Commonality and Variation in Mental Representations
+  of Music Revealed by a Cross-cultural Comparison of Rhythm Priors in 15 Countries”.
+  <em>Nature Human Behaviour</em>. https://doi.org/10.1038/s41562-023-01800-9.
+citation_ieee: '[1] N. Jacoby, “Commonality and variation in mental representations
+  of music revealed by a cross-cultural comparison of rhythm priors in 15 countries”,
+  <em>Nature Human Behaviour</em>, 2024, doi: 10.1038/s41562-023-01800-9.'
 ---

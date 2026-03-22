@@ -35,7 +35,16 @@ bibtex: |-
     doi = {10.3758/s13428-021-01722-2}
   }
 # generated from bibtex; do not edit manually
-citation_apa: 'Anglada-Tort, M., Harrison, P. M. C., & Jacoby, N. (2022). Repp: a
+citation_apa: 'Anglada-Tort, M., Harrison, P. M. C., & Jacoby, N. (2022). REPP: A
   robust cross-platform solution for online sensorimotor synchronization experiments.
   <em>Behavior Research Methods</em>. https://doi.org/10.3758/s13428-021-01722-2'
+citation_mla: 'Anglada-Tort, M., et al.. “REPP: A Robust Cross-platform Solution for
+  Online Sensorimotor Synchronization Experiments”. <em>Behavior Research Methods</em>,
+  2022, https://doi.org/10.3758/s13428-021-01722-2.'
+citation_chicago: 'Anglada-Tort, M., P. M. C. Harrison, and N. Jacoby. 2022. “REPP:
+  A Robust Cross-platform Solution for Online Sensorimotor Synchronization Experiments”.
+  <em>Behavior Research Methods</em>. https://doi.org/10.3758/s13428-021-01722-2.'
+citation_ieee: '[1] M. Anglada-Tort, P. M. C. Harrisonand N. Jacoby, “REPP: A robust
+  cross-platform solution for online sensorimotor synchronization experiments”, <em>Behavior
+  Research Methods</em>, 2022, doi: 10.3758/s13428-021-01722-2.'
 ---

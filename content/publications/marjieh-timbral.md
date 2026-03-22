@@ -33,4 +33,15 @@ bibtex: |-
 citation_apa: Marjieh, R., Harrison, P. M. C., Lee, H., Deligiannaki, F., & Jacoby,
   N. (2024). Timbral effects on consonance disentangle psychoacoustic mechanisms and
   suggest perceptual origins for musical scales. <em>Nature Communications</em>. https://doi.org/10.1038/s41467-024-45812-z
+citation_mla: Marjieh, R., et al.. “Timbral Effects on Consonance Disentangle Psychoacoustic
+  Mechanisms and Suggest Perceptual Origins for Musical Scales”. <em>Nature Communications</em>,
+  2024, https://doi.org/10.1038/s41467-024-45812-z.
+citation_chicago: Marjieh, R., P. M. C. Harrison, H. Lee, F. Deligiannaki, and N.
+  Jacoby. 2024. “Timbral Effects on Consonance Disentangle Psychoacoustic Mechanisms
+  and Suggest Perceptual Origins for Musical Scales”. <em>Nature Communications</em>.
+  https://doi.org/10.1038/s41467-024-45812-z.
+citation_ieee: '[1] R. Marjieh, P. M. C. Harrison, H. Lee, F. Deligiannakiand N. Jacoby,
+  “Timbral effects on consonance disentangle psychoacoustic mechanisms and suggest
+  perceptual origins for musical scales”, <em>Nature Communications</em>, 2024, doi:
+  10.1038/s41467-024-45812-z.'
 ---

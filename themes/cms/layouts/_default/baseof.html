@@ -28,6 +28,9 @@
   </main>
   {{ partial "footer.html" . }}
   <script src="{{ "js/tabs.js" | relURL }}"></script>
+  {{ if and (eq .Section "publications") (eq .Kind "page") }}
+  <script src="{{ "js/publication-cite.js" | relURL }}"></script>
+  {{ end }}
   {{ if .IsHome }}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="{{ "js/spectral-viz.js" | relURL }}"></script>

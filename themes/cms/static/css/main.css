@@ -2035,10 +2035,108 @@ a.pub-item-title:hover {
   text-underline-offset: 2px;
 }
 
+.project-pub-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.65rem 1rem;
+  margin-top: 4px;
+  font-size: 0.82rem;
+}
+
 .project-pub-doi-line {
   display: block;
+  min-width: 0;
+  word-break: break-word;
+}
+
+.project-pub-cite-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.project-pub-cite-btn {
+  font: inherit;
+  font-size: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.project-pub-cite-btn:hover,
+.project-pub-cite-btn:focus-visible,
+.project-pub-cite-btn[aria-expanded="true"] {
+  color: var(--color-accent);
+}
+
+.project-pub-cite-panel {
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  top: calc(100% + 6px);
+  width: max-content;
+  max-width: min(28rem, calc(100vw - 2rem));
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-bg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.project-pub-cite-panel .project-publication-citation {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+}
+
+.project-pub-cite-panel .project-publication-citation a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.project-pub-cite-tabs .tab-bar {
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.project-pub-cite-tabs .tab-btn {
+  padding: 8px 10px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.project-pub-cite-tabs .tab-panel {
+  animation: none;
+}
+
+.project-pub-cite-tabs .tab-panel .project-publication-citation {
   font-size: 0.82rem;
-  margin-top: 4px;
+}
+
+.project-pub-cite-bibtex {
+  margin: 0;
+  padding: 10px 12px;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-radius: 6px;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.project-pub-cite-bibtex code {
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .featured-pubs {

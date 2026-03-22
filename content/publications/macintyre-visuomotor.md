@@ -39,4 +39,12 @@ bibtex: |-
 citation_apa: MacIntyre, A. D., Lo, H. Y. J., Cross, I., & Scott, S. (2023). Task-irrelevant
   auditory metre shapes visuomotor sequential learning. <em>Psychological Research</em>.
   https://doi.org/10.1007/s00426-022-01690-y
+citation_mla: MacIntyre, A. D., et al.. “Task-irrelevant Auditory Metre Shapes Visuomotor
+  Sequential Learning”. <em>Psychological Research</em>, 2023, https://doi.org/10.1007/s00426-022-01690-y.
+citation_chicago: MacIntyre, A. D., H. Y. J. Lo, I. Cross, and S. Scott. 2023. “Task-irrelevant
+  Auditory Metre Shapes Visuomotor Sequential Learning”. <em>Psychological Research</em>.
+  https://doi.org/10.1007/s00426-022-01690-y.
+citation_ieee: '[1] A. D. MacIntyre, H. Y. J. Lo, I. Crossand S. Scott, “Task-irrelevant
+  auditory metre shapes visuomotor sequential learning”, <em>Psychological Research</em>,
+  2023, doi: 10.1007/s00426-022-01690-y.'
 ---
