@@ -51,10 +51,7 @@
         {{ end }}
         {{ $personSlug := .File.ContentBaseName }}
         {{ $personPublications := partial "resolve-publications-for-people.html" (dict "page" . "people_slugs" (slice $personSlug)) }}
-        {{ $publicationsHeading := "Publications" }}
-        {{ if gt (len $personPublications) 10 }}
-          {{ $publicationsHeading = "Selected publications" }}
-        {{ end }}
+        {{ $publicationsHeading := "Selected Publications" }}
         {{ partial "related-publications-section.html" (dict "page" . "heading" $publicationsHeading "publications" $personPublications) }}
       </div>
     </div>
