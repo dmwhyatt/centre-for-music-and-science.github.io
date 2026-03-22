@@ -11,7 +11,6 @@
           <img src="{{ (strings.TrimPrefix "/" .Params.logo) | relURL }}" alt="{{ .Title }}">
         </div>
         {{ end }}
-        <h1 class="group-detail-title">{{ .Title }}</h1>
         {{ with .Params.summary }}<p class="project-detail-summary">{{ . }}</p>{{ end }}
         {{ with .Params.leader_image }}
         <div class="dataset-detail-hero">

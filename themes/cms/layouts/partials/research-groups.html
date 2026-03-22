@@ -13,12 +13,10 @@
             <img src="{{ (strings.TrimPrefix "/" .) | relURL }}" alt="{{ $groupTitle }}">
           </div>
           {{ end }}
-          <h3 class="research-group-card-title">{{ .Title }}</h3>
           {{ with .Params.summary }}<p class="research-group-card-summary">{{ . }}</p>{{ end }}
           {{ with .Params.leads }}
           <p class="research-group-card-leads"><strong>Leads:</strong> {{ delimit . ", " }}</p>
           {{ end }}
-          <span class="research-group-card-link">Details coming soon</span>
         </div>
         {{ else }}
         <a href="{{ .RelPermalink }}" class="research-group-card">
@@ -27,12 +25,10 @@
             <img src="{{ (strings.TrimPrefix "/" .) | relURL }}" alt="{{ $groupTitle }}">
           </div>
           {{ end }}
-          <h3 class="research-group-card-title">{{ .Title }}</h3>
           {{ with .Params.summary }}<p class="research-group-card-summary">{{ . }}</p>{{ end }}
           {{ with .Params.leads }}
           <p class="research-group-card-leads"><strong>Leads:</strong> {{ delimit . ", " }}</p>
           {{ end }}
-          <span class="research-group-card-link">See more <span class="arrow">&rarr;</span></span>
         </a>
         {{ end }}
       {{ end }}
