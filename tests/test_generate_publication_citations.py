@@ -118,6 +118,18 @@ class PublicationCitationTests(unittest.TestCase):
             "Doe, J. (2022). <em>Proceedings</em>. https://example.com/x",
         )
 
+    def test_normalize_citeproc_html_strips_van_rijn_bibtex_braces(self):
+        citation_html = (
+            "{van Rijn}, P., Lee, H. (2025). <em>Proceedings</em>. "
+            "https://doi.org/10.1000/example"
+        )
+        out = normalize_citeproc_html(citation_html)
+        self.assertEqual(
+            out,
+            "van Rijn, P., Lee, H. (2025). <em>Proceedings</em>. "
+            "https://doi.org/10.1000/example",
+        )
+
     def test_extract_publication_venue_uses_journal_or_booktitle(self):
         self.assertEqual(
             extract_publication_venue({"journal": "Music Perception"}),

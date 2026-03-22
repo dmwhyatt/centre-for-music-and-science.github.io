@@ -163,6 +163,8 @@ def normalize_citeproc_html(citation_html: str) -> str:
     citation_html = re.sub(r"(?<=\.)and\b", " and", citation_html)
     citation_html = re.sub(r"^\[(\d+)\](?=\S)", r"[\1] ", citation_html)
     citation_html = normalize_terminal_title_punctuation(citation_html)
+    # Citeproc leaves BibTeX surname braces for particles (e.g. {van Rijn}).
+    citation_html = citation_html.replace("{van Rijn}", "van Rijn")
     citation_html = re.sub(r"\s+", " ", citation_html).strip()
     return citation_html
 

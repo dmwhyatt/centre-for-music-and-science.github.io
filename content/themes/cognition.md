@@ -9,4 +9,5 @@ projects:
   - "memory"
   - "expectation"
   - "consonance"
+  - "score-reading"
 ---
