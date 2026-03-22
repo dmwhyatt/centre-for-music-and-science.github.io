@@ -1,16 +1,17 @@
 <section class="research-themes" id="research">
   <div class="container">
-    <h2 class="section-title">Research</h2>
     <p class="section-intro">{{ .Site.Params.themesIntro }}</p>
 
     {{ $allThemes := sort (where .Site.RegularPages "Section" "themes") "Params.weight" }}
     {{ $allTopics := where .Site.RegularPages "Section" "topics" }}
     {{ $allProjects := where .Site.RegularPages "Section" "projects" }}
+    {{ $allMethods := sort (where .Site.RegularPages "Section" "methods") "Params.weight" }}
 
     {{ if $allThemes }}
     <div class="research-group research-group--all">
       <div class="tabs" data-tab-group="research">
-        <div class="tab-bar" role="tablist">
+        <div class="tab-bar research-header-bar" role="tablist">
+          <span class="tab-bar-title tab-bar-title--accent">Themes</span>
           {{ range $i, $theme := $allThemes }}
           <button class="tab-btn{{ if eq $i 0 }} active{{ end }}"
                   role="tab"
@@ -64,6 +65,20 @@
         </div>
         {{ end }}
       </div>
+
+      {{ if gt (len $allMethods) 0 }}
+      <div class="methods-block">
+        <div class="methods-bar research-header-bar" aria-label="Methods">
+          <span class="tab-bar-title tab-bar-title--accent">Methods</span>
+        </div>
+        <p class="methods-intro">Our studies often involve the following:</p>
+        <div class="theme-projects methods-projects">
+          {{ range $allMethods }}
+            {{ partial "research-item-card.html" (dict "page" . "label" "Method") }}
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
     </div>
     {{ end }}
 
