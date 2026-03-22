@@ -1,3 +1,3 @@
 ---
-title: "Research Themes"
+title: "Research"
 ---
