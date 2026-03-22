@@ -122,6 +122,11 @@ def render_apa_citation(fields: Dict[str, str]) -> str:
     return " ".join(parts).strip()
 
 
+def extract_publication_venue(fields: Dict[str, str]) -> str:
+    """Extract journal/booktitle venue for list-style rendering."""
+    return fields.get("journal", fields.get("booktitle", "")).strip()
+
+
 def build_front_matter_text(data: Dict) -> str:
     """Serialize YAML front matter with stable key order."""
     yaml_text = yaml.safe_dump(
@@ -145,6 +150,10 @@ def update_publication_file(path: Path) -> bool:
         return False
 
     front_matter["citation_apa"] = render_apa_citation(fields)
+    front_matter["authors"] = format_authors_apa(fields.get("author", ""))
+    venue = extract_publication_venue(fields)
+    if venue:
+        front_matter["journal"] = venue
     raw_doi = fields.get("doi", front_matter.get("doi", ""))
     front_matter["doi"] = normalize_doi(raw_doi)
 

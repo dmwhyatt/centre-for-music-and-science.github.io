@@ -31,8 +31,37 @@
   <ul class="project-publications-list">
     {{ range sort $relatedPublications "Date" "desc" }}
       {{ if not (in $featured .) }}
+      {{ $pub := . }}
+      {{ $href := "" }}
+      {{ if $pub.Params.doi }}
+        {{ $href = $pub.Params.doi }}
+      {{ else if not (default false $pub.Params.stub_only) }}
+        {{ $href = $pub.RelPermalink }}
+      {{ end }}
       <li>
-        {{ partial "publication-citation-link.html" (dict "pub" .) }}
+        {{ if $href }}
+        <a href="{{ $href }}" {{ if $pub.Params.doi }}target="_blank" rel="noopener"{{ end }}>
+          {{ if $pub.Params.authors }}<span class="project-pub-authors">{{ partial "bold-lab-authors" (dict "authors" $pub.Params.authors "labAuthors" $page.Site.Data.lab_authors) }}</span>{{ end }}
+          <span class="project-pub-title">{{ $pub.Title }}</span>
+          {{ if or $pub.Params.journal $pub.Params.inpress }}
+          <span class="project-pub-journal">
+            {{- with $pub.Params.journal }}{{ . }}{{ end -}}
+            {{- if $pub.Params.inpress }}{{ if $pub.Params.journal }} {{ end }}(In Press){{ else if and $pub.Params.journal $pub.Date }} ({{ $pub.Date.Format "2006" }}){{ end -}}
+          </span>
+          {{ end }}
+        </a>
+        {{ else }}
+        <div class="project-publication-citation">
+          {{ if $pub.Params.authors }}<span class="project-pub-authors">{{ partial "bold-lab-authors" (dict "authors" $pub.Params.authors "labAuthors" $page.Site.Data.lab_authors) }}</span>{{ end }}
+          <span class="project-pub-title">{{ $pub.Title }}</span>
+          {{ if or $pub.Params.journal $pub.Params.inpress }}
+          <span class="project-pub-journal">
+            {{- with $pub.Params.journal }}{{ . }}{{ end -}}
+            {{- if $pub.Params.inpress }}{{ if $pub.Params.journal }} {{ end }}(In Press){{ else if and $pub.Params.journal $pub.Date }} ({{ $pub.Date.Format "2006" }}){{ end -}}
+          </span>
+          {{ end }}
+        </div>
+        {{ end }}
       </li>
       {{ end }}
     {{ end }}

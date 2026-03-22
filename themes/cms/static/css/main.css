@@ -1835,6 +1835,10 @@ a.pub-item-title:hover {
   letter-spacing: -0.02em;
 }
 
+.project-title-meta {
+  margin-bottom: 28px;
+}
+
 .project-people-icons {
   display: flex;
   flex-wrap: wrap;
@@ -1998,6 +2002,19 @@ a.pub-item-title:hover {
   color: var(--color-text-muted);
   font-style: italic;
   margin-top: 2px;
+}
+
+.project-pub-doi {
+  color: var(--color-accent);
+  font-style: normal;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.project-pub-doi-line {
+  display: block;
+  font-size: 0.82rem;
+  margin-top: 4px;
 }
 
 .featured-pubs {

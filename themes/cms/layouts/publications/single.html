@@ -3,11 +3,26 @@
   <div class="container">
     <div class="project-detail-content">
       <h1 class="project-detail-title">{{ .Title }}</h1>
-      <p class="project-publication-citation">{{ partial "publication-citation.html" . }}</p>
-      {{ with .Params.abstract }}<p class="project-detail-summary">{{ . }}</p>{{ end }}
-      {{ if .Params.doi }}
-      <p><a href="{{ .Params.doi }}" target="_blank" rel="noopener">Read via DOI &rarr;</a></p>
+      <div class="project-title-meta">
+        {{ if .Params.authors }}<span class="project-pub-authors">{{ partial "bold-lab-authors" (dict "authors" .Params.authors "labAuthors" .Site.Data.lab_authors) }}</span>{{ end }}
+        {{ if or .Params.journal .Params.inpress }}
+        <span class="project-pub-journal">
+          {{- with .Params.journal }}{{ . }}{{ end -}}
+          {{- if .Params.inpress }}{{ if .Params.journal }} {{ end }}(In Press){{ else if and .Params.journal .Date }} ({{ .Date.Format "2006" }}){{ end -}}
+        </span>
+        {{ end }}
+        {{ if .Params.doi }}
+        <span class="project-pub-doi-line"><a href="{{ .Params.doi }}" target="_blank" rel="noopener" class="project-pub-doi">{{ .Params.doi }}</a></span>
+        {{ end }}
+      </div>
+
+      {{ with .Params.abstract }}
+      <section class="project-publications">
+        <h2 class="project-publications-heading">Abstract</h2>
+        <p class="project-detail-summary">{{ . }}</p>
+      </section>
       {{ end }}
+
       <div class="project-detail-body">
         {{ .Content }}
       </div>
@@ -35,6 +50,15 @@
         </ul>
       </section>
       {{ end }}
+
+      <section class="project-publications">
+        <h2 class="project-publications-heading">Citation</h2>
+        <ul class="project-publications-list">
+          <li>
+            <span class="project-publication-citation">{{ partial "publication-citation.html" . }}</span>
+          </li>
+        </ul>
+      </section>
 
       <div class="project-detail-back">
         <a href="{{ "publications/" | relURL }}">&larr; Back to publications</a>

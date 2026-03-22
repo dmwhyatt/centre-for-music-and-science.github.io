@@ -1,5 +1,6 @@
 import unittest
 
+from scripts.generate_publication_citations import extract_publication_venue
 from scripts.generate_publication_citations import format_authors_apa
 from scripts.generate_publication_citations import normalize_doi
 from scripts.generate_publication_citations import parse_bibtex_fields
@@ -33,7 +34,8 @@ class PublicationCitationTests(unittest.TestCase):
             "author": "Frank, Joshua and Harrison, Peter M. C.",
             "year": "2026",
             "title": (
-                "Modeling individual differences in chord pleasantness judgments"
+                "Modeling individual differences in chord pleasantness "
+                "judgments"
             ),
             "journal": "Psychology of Aesthetics, Creativity, and the Arts",
             "volume": "20",
@@ -50,7 +52,9 @@ class PublicationCitationTests(unittest.TestCase):
             ),
             citation,
         )
-        self.assertTrue(citation.endswith("https://doi.org/10.1037/aca0000836"))
+        self.assertTrue(
+            citation.endswith("https://doi.org/10.1037/aca0000836")
+        )
 
     def test_normalize_doi_accepts_url_or_raw(self):
         self.assertEqual(
@@ -60,6 +64,16 @@ class PublicationCitationTests(unittest.TestCase):
         self.assertEqual(
             normalize_doi("10.1000/xyz"),
             "https://doi.org/10.1000/xyz",
+        )
+
+    def test_extract_publication_venue_uses_journal_or_booktitle(self):
+        self.assertEqual(
+            extract_publication_venue({"journal": "Music Perception"}),
+            "Music Perception",
+        )
+        self.assertEqual(
+            extract_publication_venue({"booktitle": "Proceedings of ISMIR"}),
+            "Proceedings of ISMIR",
         )
 
 
