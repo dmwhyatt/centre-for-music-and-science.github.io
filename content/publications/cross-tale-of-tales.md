@@ -14,6 +14,6 @@ bibtex: |-
     doi = {10.1177/17468477221114596}
   }
 # generated from bibtex; do not edit manually
-citation_apa: 'Cross, I. (2022). Music, memory and narrative: The art of telling in
-  Tale of Tales. <em>Animation</em>. https://doi.org/10.1177/17468477221114596'
+citation_apa: 'Cross, I. (2022). Music, memory and narrative: the art of telling in
+  tale of tales. <em>Animation</em>. https://doi.org/10.1177/17468477221114596'
 ---

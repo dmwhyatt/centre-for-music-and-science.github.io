@@ -8,7 +8,7 @@ projects:
 - consonance
 bibtex: |-
   @article{frank2026chordpleasantness,
-    author = {Frank, Joshua and Harrison, Peter M. C.},
+    author = {Frank, J. and Harrison, P. M. C.},
     title = {Modeling individual differences in chord pleasantness judgments},
     journal = {Psychology of Aesthetics, Creativity, and the Arts},
     year = {2026},

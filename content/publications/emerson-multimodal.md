@@ -7,7 +7,7 @@ journal: Transactions of the International Society for Music Information Retriev
 doi: https://doi.org/10.5334/tismir.230
 bibtex: |-
   @article{emerson-multimodal,
-    author = {Emerson, K., and Harrison, P. M. C.},
+    author = {Emerson, K. and Harrison, P. M. C.},
     title = {Multimodal datasets for studying expert performances of musical scores},
     journal = {Transactions of the International Society for Music Information Retrieval},
     year = {2025},

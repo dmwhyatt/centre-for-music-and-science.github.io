@@ -7,6 +7,7 @@ from scripts.generate_publication_citations import inject_autogen_comments
 from scripts.generate_publication_citations import normalize_doi
 from scripts.generate_publication_citations import normalize_pybtex_html
 from scripts.generate_publication_citations import parse_bibtex_fields
+from scripts.generate_publication_citations import publication_link
 from scripts.generate_publication_citations import render_apa_citation
 
 
@@ -77,6 +78,31 @@ class PublicationCitationTests(unittest.TestCase):
         self.assertEqual(
             normalize_doi("10.1000/xyz"),
             "https://doi.org/10.1000/xyz",
+        )
+
+    def test_publication_link_prefers_registered_doi_over_url(self):
+        self.assertEqual(
+            publication_link(
+                {"doi": "10.1000/xyz", "url": "https://example.com/a"}
+            ),
+            "https://doi.org/10.1000/xyz",
+        )
+
+    def test_publication_link_falls_back_to_url(self):
+        self.assertEqual(
+            publication_link({"url": "https://www.aes.org/e-lib/browse.cfm?elib=1"}),
+            "https://www.aes.org/e-lib/browse.cfm?elib=1",
+        )
+
+    def test_normalize_pybtex_html_flattens_url_field_anchor(self):
+        citation_html = (
+            "Doe, J. (2022). <em>Proceedings</em>. "
+            'URL: <a href="https://example.com/x">https://example.com/x</a>'
+        )
+        out = normalize_pybtex_html(citation_html)
+        self.assertEqual(
+            out,
+            "Doe, J. (2022). <em>Proceedings</em>. https://example.com/x",
         )
 
     def test_extract_publication_venue_uses_journal_or_booktitle(self):

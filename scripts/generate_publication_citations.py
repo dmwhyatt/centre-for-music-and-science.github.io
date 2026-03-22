@@ -84,12 +84,36 @@ def normalize_doi(doi_value: str) -> str:
     return f"https://doi.org/{doi_value}" if doi_value else ""
 
 
+def publication_link(fields: Dict[str, str]) -> str:
+    """Resolve the outbound link for a publication (DOI preferred, else explicit URL)."""
+    doi_raw = fields.get("doi", "").strip().strip("{}")
+    url_raw = fields.get("url", "").strip().strip("{}")
+    if doi_raw.startswith("10."):
+        return normalize_doi(doi_raw)
+    if doi_raw.startswith(("http://", "https://")):
+        return doi_raw
+    if url_raw.startswith(("http://", "https://")):
+        return url_raw
+    return normalize_doi(doi_raw)
+
+
 def normalize_pybtex_html(citation_html: str) -> str:
     """Normalize pybtex HTML output for front matter storage."""
     citation_html = html.unescape(citation_html)
     citation_html = citation_html.replace("\xa0", " ")
     citation_html = re.sub(
+        r'<span class="bibtex-protected">([^<]*)</span>',
+        r"\1",
+        citation_html,
+    )
+    citation_html = re.sub(
         r'<a\s+href="(https?://doi\.org/[^"]+)">[^<]*</a>',
+        r"\1",
+        citation_html,
+        flags=re.IGNORECASE,
+    )
+    citation_html = re.sub(
+        r'URL:\s*<a\s+href="([^"]+)">\s*\1\s*</a>',
         r"\1",
         citation_html,
         flags=re.IGNORECASE,
@@ -168,8 +192,7 @@ def update_publication_file(path: Path) -> bool:
     venue = extract_publication_venue(fields)
     if venue:
         front_matter["journal"] = venue
-    raw_doi = fields.get("doi", front_matter.get("doi", ""))
-    front_matter["doi"] = normalize_doi(raw_doi)
+    front_matter["doi"] = publication_link(fields)
 
     updated = build_front_matter_text(front_matter) + body
     if updated == original:

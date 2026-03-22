@@ -8,7 +8,7 @@ doi: https://doi.org/10.31234/osf.io/t4w5d_v1
 inpress: true
 bibtex: |-
   @article{tan-mood-regulation,
-    author = {Tan, C., and Harrison, P. M. C.},
+    author = {Tan, C. and Harrison, P. M. C.},
     title = {What music do people use for mood regulation?},
     journal = {Psychology of Music},
     year = {2026},
@@ -16,5 +16,5 @@ bibtex: |-
   }
 # generated from bibtex; do not edit manually
 citation_apa: Tan, C., & Harrison, P. M. C. (2026). What music do people use for mood
-  regulation?. <em>Psychology of Music</em>. https://doi.org/10.31234/osf.io/t4w5d_v1
+  regulation? <em>Psychology of Music</em>. https://doi.org/10.31234/osf.io/t4w5d_v1
 ---
