@@ -44,7 +44,7 @@
           {{ if or $pub.Params.journal $pub.Params.inpress }}
           <span class="project-pub-journal">
             {{- with $pub.Params.journal }}{{ . }}{{ end -}}
-            {{- if $pub.Params.inpress }}{{ if $pub.Params.journal }} {{ end }}(In Press){{ else if and $pub.Params.journal $pub.Date }} ({{ $pub.Date.Format "2006" }}){{ end -}}
+            {{- if $pub.Params.inpress }}{{ if $pub.Params.journal }} {{ end }}(Forthcoming){{ else if and $pub.Params.journal $pub.Date }} ({{ $pub.Date.Format "2006" }}){{ end -}}
           </span>
           {{ end }}
         </a>
@@ -55,7 +55,7 @@
           {{ if or $pub.Params.journal $pub.Params.inpress }}
           <span class="project-pub-journal">
             {{- with $pub.Params.journal }}{{ . }}{{ end -}}
-            {{- if $pub.Params.inpress }}{{ if $pub.Params.journal }} {{ end }}(In Press){{ else if and $pub.Params.journal $pub.Date }} ({{ $pub.Date.Format "2006" }}){{ end -}}
+            {{- if $pub.Params.inpress }}{{ if $pub.Params.journal }} {{ end }}(Forthcoming){{ else if and $pub.Params.journal $pub.Date }} ({{ $pub.Date.Format "2006" }}){{ end -}}
           </span>
           {{ end }}
         </div>

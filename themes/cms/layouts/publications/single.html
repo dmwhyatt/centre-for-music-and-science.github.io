@@ -9,7 +9,7 @@
         {{ if or .Params.journal .Params.inpress }}
         <span class="project-pub-journal">
           {{- with .Params.journal }}{{ . }}{{ end -}}
-          {{- if .Params.inpress }}{{ if .Params.journal }} {{ end }}(In Press){{ else if and .Params.journal .Date }} ({{ .Date.Format "2006" }}){{ end -}}
+          {{- if .Params.inpress }}{{ if .Params.journal }} {{ end }}(Forthcoming){{ else if and .Params.journal .Date }} ({{ .Date.Format "2006" }}){{ end -}}
         </span>
         {{ end }}
         <div class="project-pub-links-row">

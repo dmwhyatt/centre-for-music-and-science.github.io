@@ -8,6 +8,6 @@
   {{- if $pub.Date }} {{ end -}}
   {{- $pub.Title -}}.
   {{- if $pub.Params.journal }} <em>{{ $pub.Params.journal }}</em>.{{ end -}}
-  {{- if and (not $pub.Params.journal) $pub.Params.inpress }} (In press).{{ end -}}
+  {{- if and (not $pub.Params.journal) $pub.Params.inpress }} (Forthcoming).{{ end -}}
 {{- end -}}
 

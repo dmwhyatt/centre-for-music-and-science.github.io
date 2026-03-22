@@ -731,8 +731,11 @@ img {
 }
 
 .project-card {
+  --project-card-thumb-width: 120px;
+  --project-card-min-height: calc(var(--project-card-thumb-width) / 2);
   display: flex;
   align-items: stretch;
+  min-height: var(--project-card-min-height);
   border-radius: 8px;
   overflow: hidden;
   background: var(--color-card-bg);
@@ -762,7 +765,7 @@ img {
 
 .project-card-thumb {
   flex-shrink: 0;
-  width: 120px;
+  width: var(--project-card-thumb-width);
   aspect-ratio: 2 / 1;
   overflow: hidden;
   background: var(--color-border);
@@ -782,19 +785,13 @@ img {
   justify-content: center;
 }
 
-.project-label {
-  display: block;
-  padding: 12px 20px 4px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--color-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+.project-card--no-thumb .project-card-text {
+  padding-left: var(--project-card-thumb-width);
 }
 
 .project-title {
   display: block;
-  padding: 0 20px 12px;
+  padding: 12px 20px;
   font-size: 1.05rem;
   font-weight: 500;
   color: var(--color-text);
