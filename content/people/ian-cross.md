@@ -1,5 +1,7 @@
 ---
 title: "Ian Cross"
+publication_names:
+  - "Cross, I."
 role: "Emeritus Professor"
 email: "ic108@cam.ac.uk"
 image: "/images/people/ian-cross.jpg"

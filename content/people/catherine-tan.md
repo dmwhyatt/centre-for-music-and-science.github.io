@@ -1,5 +1,7 @@
 ---
 title: "Catherine Tan"
+publication_names:
+  - "Tan, C."
 role: "PhD Student"
 email: ""
 image: "/images/people/catherine-tan.jpg"

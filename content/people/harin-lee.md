@@ -1,5 +1,7 @@
 ---
 title: "Harin Lee"
+publication_names:
+  - "Lee, H."
 role: "Junior Research Fellow"
 email: "hl744@cam.ac.uk"
 image: "/images/people/harin-lee.png"

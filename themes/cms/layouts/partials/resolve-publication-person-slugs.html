@@ -1,17 +1,10 @@
 {{- $publication := .publication -}}
-{{- $profiles := default site.Data.lab_author_profiles .profiles -}}
-{{- $authorsText := default "" $publication.Params.authors -}}
-{{- $labAuthors := default (slice) site.Data.lab_authors -}}
+{{- $authorProfiles := partial "resolve-publication-author-profiles.html" (dict "publication" $publication "site" site) -}}
 {{- $slugs := slice -}}
-{{- range $profiles -}}
-  {{- $canonical := default "" .bibtex -}}
-  {{- if eq $canonical "" -}}
-    {{- errorf "Lab author profile error: missing required 'bibtex' value for slug %q in data/lab_author_profiles.yaml" .slug -}}
-  {{- end -}}
-  {{- if and $authorsText (in $labAuthors $canonical) (in $authorsText $canonical) -}}
-    {{- if not (in $slugs .slug) -}}
-      {{- $slugs = $slugs | append .slug -}}
-    {{- end -}}
+{{- range $authorProfiles -}}
+  {{- $slug := .File.ContentBaseName -}}
+  {{- if and $slug (not (in $slugs $slug)) -}}
+    {{- $slugs = $slugs | append $slug -}}
   {{- end -}}
 {{- end -}}
 {{- return $slugs -}}

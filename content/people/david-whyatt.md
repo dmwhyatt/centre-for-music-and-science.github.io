@@ -1,5 +1,7 @@
 ---
 title: "David Whyatt"
+publication_names:
+  - "Whyatt, D. M."
 role: "PhD Student"
 email: "dmw56@cam.ac.uk"
 image: "/images/people/david-whyatt.jpg"

@@ -122,8 +122,8 @@ No empty placeholder headings should be rendered.
 
 ## Author matching source of truth
 
-Author-name decoration and person-profile mapping are intentionally aligned:
+Author-name decoration and person-profile mapping are derived from people records:
 
-- `data/lab_authors.yaml` defines canonical lab author strings used for bolding.
-- `data/lab_author_profiles.yaml` maps canonical `bibtex` strings to person slugs.
-- Publication-to-person inference only links authors that appear in both datasets.
+- `content/people/*.md` may define `publication_names` as canonical BibTeX-style author strings.
+- Publication-to-person inference links authors when a `publication_names` value appears in a publication's `authors` string.
+- Author bolding and profile-avatar linking both use the same `publication_names` source.

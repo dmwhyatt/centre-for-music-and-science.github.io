@@ -1,5 +1,7 @@
 ---
 title: "David Duncan"
+publication_names:
+  - "Duncan, D."
 role: "Research Assistant"
 email: "dtd25@cam.ac.uk"
 image: "/images/people/david-duncan.jpg"

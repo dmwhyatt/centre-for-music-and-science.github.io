@@ -1,5 +1,7 @@
 ---
 title: "Joshua Frank"
+publication_names:
+  - "Frank, J."
 role: "PhD Student"
 email: "jbf43@cam.ac.uk"
 image: "/images/people/joshua-frank.jpg"

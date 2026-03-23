@@ -5,7 +5,7 @@
 
 {{- range $allPublications -}}
   {{- $publication := . -}}
-  {{- $publicationPeople := partial "resolve-publication-person-slugs.html" (dict "publication" $publication "profiles" $page.Site.Data.lab_author_profiles) -}}
+  {{- $publicationPeople := partial "resolve-publication-person-slugs.html" (dict "publication" $publication) -}}
   {{- $matches := false -}}
   {{- range $peopleSlugs -}}
     {{- if in $publicationPeople . -}}

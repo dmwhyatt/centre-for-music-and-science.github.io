@@ -1,5 +1,7 @@
 ---
 title: "Huw Cheston"
+publication_names:
+  - "Cheston, H."
 role: "Postdoctoral Researcher"
 email: ""
 image: "/images/people/huw-cheston.jpg"

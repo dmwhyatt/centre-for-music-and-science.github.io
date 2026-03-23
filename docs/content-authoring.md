@@ -68,9 +68,10 @@ Do not manually edit:
 
 Author matching for profile links and bolding:
 
-- Keep canonical lab author strings in `data/lab_authors.yaml`.
-- Keep profile mappings in `data/lab_author_profiles.yaml` (`bibtex` + `slug`).
-- Use the same canonical string in both places to ensure author bolding and person linking stay in sync.
+- Add canonical BibTeX-style author strings to person records via `publication_names`.
+- Example:
+  - `publication_names: ["Cross, I."]`
+- Use these canonical strings exactly as they appear in generated publication `authors` lines.
 
 ## Featured publications
 
@@ -96,7 +97,7 @@ Dataset pages automatically gather related publications from this field.
 - Card not linkable: check `stub_only` is not `true`.
 - Missing relation list: verify reverse tags include the current entity slug.
 - Missing person on a project page: verify the project has the person slug in `people`.
-- Missing publication on a group page: verify one of the group members is recognized in the publication author line via `lab_authors` / `lab_author_profiles`.
+- Missing publication on a group page: verify a group member has a matching `publication_names` value present in the publication `authors` line.
 - Missing featured card: verify the featured slug exists and matches publication slug.
 - Wrong citation: verify `bibtex` and rerun citation generation.
 - Build fails with hierarchy error: check `themes.*.projects` and `projects.*.projects` for missing or orphaned slugs.

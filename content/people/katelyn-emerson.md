@@ -1,5 +1,7 @@
 ---
 title: "Katelyn Emerson"
+publication_names:
+  - "Emerson, K."
 role: "PhD Student"
 email: "kje34@cam.ac.uk"
 image: "/images/people/katelyn-emerson.jpg"

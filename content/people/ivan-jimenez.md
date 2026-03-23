@@ -1,5 +1,7 @@
 ---
 title: "Ivan Jimenez"
+publication_names:
+  - "Jimenez, I."
 role: "Affiliate Researcher"
 email: "ivan.jimenez.rodriguez@uniarts.fi"
 image: "/images/people/Ivan_Jimenez.jpg"

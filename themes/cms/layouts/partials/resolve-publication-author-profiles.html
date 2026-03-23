@@ -1,0 +1,22 @@
+{{- $publication := .publication -}}
+{{- $site := .site | default site -}}
+{{- $authorsText := default "" $publication.Params.authors -}}
+{{- $authorProfiles := slice -}}
+
+{{- if $authorsText -}}
+  {{- range (where $site.RegularPages "Section" "people") -}}
+    {{- $person := . -}}
+    {{- $aliases := default (slice) $person.Params.publication_names -}}
+    {{- $matchesPublication := false -}}
+    {{- range $aliases -}}
+      {{- if and . (in $authorsText .) -}}
+        {{- $matchesPublication = true -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if and $matchesPublication (not (in $authorProfiles $person)) -}}
+      {{- $authorProfiles = $authorProfiles | append $person -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $authorProfiles -}}

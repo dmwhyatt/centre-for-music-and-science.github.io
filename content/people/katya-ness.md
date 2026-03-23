@@ -1,5 +1,7 @@
 ---
 title: "Katya Ness"
+publication_names:
+  - "Ness, K."
 role: "PhD Student"
 email: "kn428@cam.ac.uk"
 image: "/images/people/katya-ness.jpg"
