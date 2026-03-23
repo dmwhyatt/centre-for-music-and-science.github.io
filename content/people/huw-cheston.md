@@ -2,11 +2,13 @@
 title: "Huw Cheston"
 publication_names:
   - "Cheston, H."
-role: "Postdoctoral Researcher"
+status: alumni
+degree_type: "PhD"
+graduation_year: "2025"
 email: ""
 image: "/images/people/huw-cheston.jpg"
 weight: 18
-category: postdoc
+category: alumni
 group: "mcc"
 website: ""
 ---

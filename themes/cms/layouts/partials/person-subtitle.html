@@ -1,0 +1,16 @@
+{{- $person := . -}}
+{{- $subtitle := "" -}}
+{{- if $person.Params.position_title -}}
+  {{- $subtitle = $person.Params.position_title -}}
+{{- else if $person.Params.degree_type -}}
+  {{- if and (eq $person.Params.status "alumni") $person.Params.graduation_year -}}
+    {{- $subtitle = printf "%s %v" $person.Params.degree_type $person.Params.graduation_year -}}
+  {{- else if eq $person.Params.status "active" -}}
+    {{- $subtitle = printf "%s student" $person.Params.degree_type -}}
+  {{- else if $person.Params.graduation_year -}}
+    {{- $subtitle = printf "%s %v" $person.Params.degree_type $person.Params.graduation_year -}}
+  {{- else -}}
+    {{- $subtitle = $person.Params.degree_type -}}
+  {{- end -}}
+{{- end -}}
+{{- return $subtitle -}}

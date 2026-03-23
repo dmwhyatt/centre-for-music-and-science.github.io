@@ -1,6 +1,7 @@
 ---
 title: "Arild Stenberg"
-role: "Senior Research Associate"
+status: active
+position_title: "Senior Research Associate"
 email: "as446@cam.ac.uk"
 image: "/images/people/arild-stenberg.jpg"
 weight: 4

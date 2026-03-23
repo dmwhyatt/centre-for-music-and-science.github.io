@@ -1,6 +1,7 @@
 ---
 title: "Isaac Sebenius"
-role: "Affiliate Researcher"
+status: active
+position_title: "Affiliate Researcher"
 email: ""
 image: "/images/people/isaac-sebenius.jpg"
 weight: 10

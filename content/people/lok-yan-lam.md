@@ -1,6 +1,7 @@
 ---
 title: "Lok Yan Lam"
-role: "PhD Student"
+status: active
+degree_type: "PhD"
 email: "lyl31@cam.ac.uk"
 image: "/images/people/lok-yan-lam.jpg"
 weight: 15

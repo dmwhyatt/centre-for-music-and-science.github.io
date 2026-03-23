@@ -2,7 +2,8 @@
 title: "Catherine Tan"
 publication_names:
   - "Tan, C."
-role: "PhD Student"
+status: active
+degree_type: "PhD"
 email: ""
 image: "/images/people/catherine-tan.jpg"
 weight: 16

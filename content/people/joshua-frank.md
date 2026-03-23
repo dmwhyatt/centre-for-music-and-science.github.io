@@ -2,7 +2,8 @@
 title: "Joshua Frank"
 publication_names:
   - "Frank, J."
-role: "PhD Student"
+status: active
+degree_type: "PhD"
 email: "jbf43@cam.ac.uk"
 image: "/images/people/joshua-frank.jpg"
 weight: 12

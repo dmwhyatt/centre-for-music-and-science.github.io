@@ -1,6 +1,7 @@
 ---
 title: "Myles Eastwood"
-role: "Technical Consultant"
+status: active
+position_title: "Technical Consultant"
 email: "mjfe2@cam.ac.uk"
 image: "/images/people/myles-eastwood.jpg"
 weight: 7

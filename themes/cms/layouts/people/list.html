@@ -4,7 +4,7 @@
     <h1 class="page-title">All People</h1>
 
     {{ $people := .RegularPages }}
-    {{ $categories := slice (dict "key" "director" "label" "Director") (dict "key" "phd" "label" "PhD students") (dict "key" "postdoc" "label" "Postdoctoral researchers") (dict "key" "technical" "label" "Technical staff") (dict "key" "emeritus" "label" "Emeritus staff") (dict "key" "affiliate" "label" "Affiliates") }}
+    {{ $categories := slice (dict "key" "director" "label" "Director") (dict "key" "phd" "label" "PhD students") (dict "key" "mphil" "label" "MPhil students") (dict "key" "postdoc" "label" "Postdoctoral researchers") (dict "key" "technical" "label" "Technical staff") (dict "key" "emeritus" "label" "Emeritus staff") (dict "key" "affiliate" "label" "Affiliates") (dict "key" "alumni" "label" "Alumni") }}
 
     {{ range $categories }}
       {{ $members := sort (where $people "Params.category" .key) "Params.weight" }}
@@ -20,7 +20,7 @@
       {{ end }}
     {{ end }}
 
-    {{ $other := where $people "Params.category" "not in" (slice "director" "phd" "postdoc" "technical" "emeritus" "affiliate") }}
+    {{ $other := where $people "Params.category" "not in" (slice "director" "phd" "mphil" "postdoc" "technical" "emeritus" "affiliate" "alumni") }}
     {{ if $other }}
     <div class="people-category">
       <h2 class="people-category-heading">Other</h2>
@@ -32,16 +32,6 @@
     </div>
     {{ end }}
 
-    {{ if .Site.Data.past_members }}
-    <div class="people-category">
-      <h2 class="people-category-heading">Past members</h2>
-      <ul class="past-members-list">
-        {{ range .Site.Data.past_members }}
-        <li><strong>{{ .name }}</strong> <span class="past-member-info">({{ .info }})</span></li>
-        {{ end }}
-      </ul>
-    </div>
-    {{ end }}
   </div>
 </section>
 {{ end }}

@@ -2,7 +2,8 @@
 title: "David Whyatt"
 publication_names:
   - "Whyatt, D. M."
-role: "PhD Student"
+status: active
+degree_type: "PhD"
 email: "dmw56@cam.ac.uk"
 image: "/images/people/david-whyatt.jpg"
 weight: 13

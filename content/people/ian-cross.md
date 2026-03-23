@@ -2,7 +2,8 @@
 title: "Ian Cross"
 publication_names:
   - "Cross, I."
-role: "Emeritus Professor"
+status: active
+position_title: "Emeritus Professor"
 email: "ic108@cam.ac.uk"
 image: "/images/people/ian-cross.jpg"
 weight: 2

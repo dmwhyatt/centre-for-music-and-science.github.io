@@ -2,7 +2,8 @@
 title: "David Duncan"
 publication_names:
   - "Duncan, D."
-role: "Research Assistant"
+status: active
+position_title: "Research Assistant"
 email: "dtd25@cam.ac.uk"
 image: "/images/people/david-duncan.jpg"
 weight: 5

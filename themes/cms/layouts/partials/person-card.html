@@ -1,4 +1,7 @@
 {{- $person := .person -}}
+{{- $displaySubtitle := partial "person-subtitle.html" $person -}}
+{{- $isStub := default false $person.Params.stub_only -}}
+{{- if not $isStub -}}
 <a href="{{ $person.RelPermalink }}" class="person-card">
   <div class="person-photo">
     {{ if $person.Params.image }}
@@ -12,5 +15,22 @@
     {{ end }}
   </div>
   <h3 class="person-name">{{ $person.Title }}</h3>
-  {{ with $person.Params.role }}<p class="person-role">{{ . }}</p>{{ end }}
+  {{ with $displaySubtitle }}<p class="person-role">{{ . }}</p>{{ end }}
 </a>
+{{- else -}}
+<div class="person-card person-card--stub">
+  <div class="person-photo">
+    {{ if $person.Params.image }}
+    <img src="{{ (strings.TrimPrefix "/" $person.Params.image) | relURL }}" alt="{{ $person.Title }}">
+    {{ else }}
+    <div class="person-placeholder">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+      </svg>
+    </div>
+    {{ end }}
+  </div>
+  <h3 class="person-name">{{ $person.Title }}</h3>
+  {{ with $displaySubtitle }}<p class="person-role">{{ . }}</p>{{ end }}
+</div>
+{{- end -}}

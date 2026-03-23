@@ -1,6 +1,7 @@
 ---
 title: "Farshad Jafari"
-role: "PhD Student"
+status: active
+degree_type: "PhD"
 email: "fj303@cam.ac.uk"
 image: "/images/people/farshad-jafari.jpg"
 weight: 14

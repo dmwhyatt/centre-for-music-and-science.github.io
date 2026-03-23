@@ -2,7 +2,8 @@
 title: "Peter Harrison"
 publication_names:
   - "Harrison, P. M. C."
-role: "CMS Director, Associate Professor"
+status: active
+position_title: "CMS Director, Associate Professor"
 email: "pmch2@cam.ac.uk"
 image: "/images/people/peter-harrison.jpg"
 weight: 1

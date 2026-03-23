@@ -1,6 +1,7 @@
 ---
 title: "Mustafa Beg"
-role: "Computer Officer, Faculty of Music"
+status: active
+position_title: "Computer Officer, Faculty of Music"
 email: ""
 image: "/images/people/mustafa-beg.jpeg"
 weight: 8

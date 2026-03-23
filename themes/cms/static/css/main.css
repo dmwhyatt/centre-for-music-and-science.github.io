@@ -1173,6 +1173,18 @@ img {
   color: var(--color-accent);
 }
 
+.person-card--stub {
+  cursor: default;
+}
+
+.person-card--stub:hover {
+  transform: none;
+}
+
+.person-card--stub:hover .person-name {
+  color: inherit;
+}
+
 .person-photo {
   width: 140px;
   height: 140px;

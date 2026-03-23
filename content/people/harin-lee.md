@@ -2,7 +2,8 @@
 title: "Harin Lee"
 publication_names:
   - "Lee, H."
-role: "Junior Research Fellow"
+status: active
+position_title: "Junior Research Fellow"
 email: "hl744@cam.ac.uk"
 image: "/images/people/harin-lee.jpg"
 weight: 3
