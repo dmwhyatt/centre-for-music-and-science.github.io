@@ -2,6 +2,9 @@
 title: Cognitive and sensory expectations independently shape musical expectancy and
   pleasure
 date: 2024-01-01
+stub_only: false
+projects:
+- expectation
 # generated from bibtex; do not edit manually
 authors: Cheung, V. K. M., Harrison, P. M. C., Koelsch, S., Pearce, M. T., Friederici,
   A. D., & Meyer, L.

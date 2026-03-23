@@ -53,3 +53,12 @@ JSON file, and a JS track definition.
   - Example: `Müllensiefen`, `Fouché`, `Pérez-Acosta`.
 - Do not use LaTeX accent escapes like `{\"u}`, `{\c{C}}`, or `{\'e}` in
   newly added entries.
+
+## Image format preference
+
+- Prefer `.jpg` for new raster images referenced in content pages.
+- Keep `.png` only when needed (for transparency, crisp UI/text graphics, or
+  compatibility constraints such as favicons); prefer `.svg` for logos/icons
+  when available.
+- When converting existing assets, update all affected links in `content/`
+  files in the same change.
