@@ -29,8 +29,9 @@
         <h2 class="fpub-title">{{ .Params.featured.title }}</h2>
         <div class="fpub-cite">{{ .Params.featured.citation | markdownify }}</div>
         <div class="fpub-desc">{{ .Params.featured.description | markdownify }}</div>
-        {{ if .Params.featured.doi }}
-        <a href="{{ .Params.featured.doi }}" target="_blank" rel="noopener" class="fpub-link">Read the paper &rarr;</a>
+        {{ $featuredLink := .Params.featured.link | default .Params.featured.doi }}
+        {{ if $featuredLink }}
+        <a href="{{ $featuredLink }}" target="_blank" rel="noopener" class="fpub-link">Read the paper &rarr;</a>
         {{ end }}
       </div>
       {{ with .Params.featured.image }}

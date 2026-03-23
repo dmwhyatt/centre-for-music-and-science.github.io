@@ -22,8 +22,8 @@
       </nav>
       <div class="project-detail-content">
         {{ $projectThumb := .Params.thumbnail | default .Params.leader_image }}
-        <header class="project-header">
-          <div class="project-title-meta">
+        <header class="detail-header">
+          <div class="project-header-meta">
             <h1 class="project-detail-title">{{ .Title }}</h1>
         {{ $projectSlug := .File.ContentBaseName }}
         {{ $allPeople := where .Site.RegularPages "Section" "people" }}
@@ -61,7 +61,7 @@
         {{ end }}
           </div>
           {{ if $projectThumb }}
-          <div class="project-header-thumb">
+          <div class="detail-header-thumb">
             <img src="{{ (strings.TrimPrefix "/" $projectThumb) | relURL }}" alt="{{ .Title }} thumbnail">
           </div>
           {{ end }}

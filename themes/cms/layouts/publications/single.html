@@ -9,7 +9,7 @@
       {{ partial "publication-require-bibtex.html" . }}
       <h1 class="project-detail-title">{{ .Title }}</h1>
       <div class="publication-header">
-        <div class="project-title-meta">
+        <div class="publication-title-meta">
           {{ if .Params.authors }}<span class="project-pub-authors">{{ partial "bold-lab-authors" (dict "publication" . "site" .Site) }}</span>{{ end }}
           {{ if or .Params.journal .Params.inpress }}
           <span class="project-pub-journal">
@@ -18,8 +18,9 @@
           </span>
           {{ end }}
           <div class="project-pub-links-row">
-            {{ if .Params.doi }}
-            <span class="project-pub-doi-line"><a href="{{ .Params.doi }}" target="_blank" rel="noopener" class="project-pub-doi">{{ .Params.doi }}</a></span>
+            {{ $paperLink := .Params.link | default .Params.doi }}
+            {{ if $paperLink }}
+            <span class="project-pub-doi-line"><a href="{{ $paperLink }}" target="_blank" rel="noopener" class="project-pub-doi">{{ $paperLink }}</a></span>
             {{ end }}
             <span class="project-pub-cite-wrap">
               <button type="button" class="project-pub-cite-btn" aria-expanded="false" aria-controls="pub-citation-panel" id="pub-cite-trigger">Cite</button>

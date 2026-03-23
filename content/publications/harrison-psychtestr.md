@@ -3,7 +3,7 @@ title: 'psychTestR: An R package for designing and conducting behavioural psycho
   experiments'
 date: 2020-01-01
 methods:
-  - large-scale-online-experiments
+- large-scale-online-experiments
 abstract: Today’s psychologists can choose from many different software packages for
   developing and administering psychological experiments, with the most appropriate
   package typically varying from task to task. For simple experiments based on short
@@ -42,4 +42,5 @@ citation_ieee: '[1] P. M. C. Harrison, “psychTestR: An R package for designing
   conducting behavioural psychological experiments”, <em>The Journal of Open Source
   Software</em>, 2020, doi: 10.21105/joss.02088.'
 authors: Harrison, P. M. C.
+link: https://doi.org/10.21105/joss.02088
 ---

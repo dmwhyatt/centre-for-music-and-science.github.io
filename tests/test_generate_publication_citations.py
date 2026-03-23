@@ -8,6 +8,7 @@ from scripts.generate_publication_citations import extract_publication_venue
 from scripts.generate_publication_citations import inject_autogen_comments
 from scripts.generate_publication_citations import normalize_citeproc_html
 from scripts.generate_publication_citations import normalize_doi
+from scripts.generate_publication_citations import publication_doi_url
 from scripts.generate_publication_citations import parse_bibtex_fields
 from scripts.generate_publication_citations import publication_link
 from scripts.generate_publication_citations import render_csl_citation
@@ -105,6 +106,18 @@ class PublicationCitationTests(unittest.TestCase):
                 {"url": "https://www.aes.org/e-lib/browse.cfm?elib=1"}
             ),
             "https://www.aes.org/e-lib/browse.cfm?elib=1",
+        )
+
+    def test_publication_doi_url_returns_empty_when_doi_missing(self):
+        self.assertEqual(
+            publication_doi_url({"url": "https://example.com/paper"}),
+            "",
+        )
+
+    def test_publication_doi_url_normalizes_doi(self):
+        self.assertEqual(
+            publication_doi_url({"doi": "10.1000/xyz"}),
+            "https://doi.org/10.1000/xyz",
         )
 
     def test_normalize_citeproc_html_flattens_url_field_anchor(self):

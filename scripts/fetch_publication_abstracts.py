@@ -240,16 +240,21 @@ def candidate_urls(doi_param: Any) -> list[str]:
 
 
 def merge_abstract(front_matter: Dict[str, Any], abstract: str) -> Dict[str, Any]:
-    """Return front matter with ``abstract`` inserted after ``doi`` if present."""
+    """Return front matter with ``abstract`` inserted after link metadata."""
     base = {k: v for k, v in front_matter.items() if k != "abstract"}
     out: Dict[str, Any] = {}
     inserted = False
     for key, val in base.items():
-        if key == "bibtex" and "doi" not in base and not inserted:
+        if (
+            key == "bibtex"
+            and "link" not in base
+            and "doi" not in base
+            and not inserted
+        ):
             out["abstract"] = abstract
             inserted = True
         out[key] = val
-        if key == "doi" and not inserted:
+        if key in ("link", "doi") and not inserted:
             out["abstract"] = abstract
             inserted = True
     if not inserted:
@@ -278,11 +283,17 @@ def update_file(
     if publication_has_nonempty_abstract(front_matter) and not force:
         return False, "skip (abstract already set)"
 
+    link_param = front_matter.get("link")
     doi_param = front_matter.get("doi")
+    source_param = (
+        link_param
+        if isinstance(link_param, str) and link_param.strip()
+        else doi_param
+    )
     abstract: Optional[str] = None
     source = ""
 
-    d = doi_from_params(doi_param)
+    d = doi_from_params(source_param)
     if d:
         time.sleep(CROSSREF_DELAY_S)
         abstract = fetch_crossref_abstract(session, d)
@@ -296,7 +307,7 @@ def update_file(
             source = "openalex"
 
     if not abstract:
-        for url in candidate_urls(doi_param):
+        for url in candidate_urls(source_param):
             time.sleep(PAGE_DELAY_S)
             abstract = fetch_page_abstract(session, url)
             if abstract:

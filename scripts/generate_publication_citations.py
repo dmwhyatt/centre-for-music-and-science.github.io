@@ -50,6 +50,7 @@ AUTOGEN_FIELDS = (
     "citation_ieee",
     "authors",
     "journal",
+    "link",
     "doi",
 )
 CSL_STYLE_MAP = {
@@ -151,6 +152,11 @@ def publication_link(fields: Dict[str, str]) -> str:
     if url_raw.startswith(("http://", "https://")):
         return url_raw
     return normalize_doi(doi_raw)
+
+
+def publication_doi_url(fields: Dict[str, str]) -> str:
+    """Return normalized DOI URL when the entry has a DOI, else empty."""
+    return normalize_doi(fields.get("doi", "").strip().strip("{}"))
 
 
 def normalize_terminal_title_punctuation(citation_html: str) -> str:
@@ -376,7 +382,16 @@ def update_publication_file(path: Path) -> bool:
         front_matter["journal"] = venue
 
     link = publication_link(fields)
-    front_matter["doi"] = link
+    if link:
+        front_matter["link"] = link
+    else:
+        front_matter.pop("link", None)
+
+    doi_link = publication_doi_url(fields)
+    if doi_link:
+        front_matter["doi"] = doi_link
+    else:
+        front_matter.pop("doi", None)
 
     year = year_from_front_matter(front_matter.get("date")) or fields.get(
         "year", ""
@@ -408,7 +423,8 @@ def main() -> int:
     """Run citation generation for publication markdown files."""
     parser = argparse.ArgumentParser(
         description=(
-            "Generate citation fields and doi from publication BibTeX fields."
+            "Generate citation fields and publication link metadata "
+            "from publication BibTeX."
         )
     )
     parser.add_argument(

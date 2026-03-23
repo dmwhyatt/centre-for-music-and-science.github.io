@@ -2,8 +2,18 @@
 <article class="project-detail-page">
   <div class="container">
     <div class="project-detail-content">
-      <h1 class="project-detail-title">{{ .Title }}</h1>
-      {{ with .Params.summary }}<p class="project-detail-summary">{{ . }}</p>{{ end }}
+      {{ $methodThumb := .Params.thumbnail | default .Params.leader_image }}
+      <header class="detail-header">
+        <div class="method-header-meta">
+          <h1 class="project-detail-title">{{ .Title }}</h1>
+          {{ with .Params.summary }}<p class="project-detail-summary">{{ . }}</p>{{ end }}
+        </div>
+        {{ if $methodThumb }}
+        <div class="detail-header-thumb">
+          <img src="{{ (strings.TrimPrefix "/" $methodThumb) | relURL }}" alt="{{ .Title }} thumbnail">
+        </div>
+        {{ end }}
+      </header>
       {{ with .Params.image }}
       <div class="dataset-detail-hero">
         <img src="{{ (strings.TrimPrefix "/" .) | relURL }}" alt="{{ $.Title }}">

@@ -4,6 +4,9 @@
 
 {{ if not (default false $pub.Params.stub_only) }}
   {{ $href = $pub.RelPermalink }}
+{{ else if $pub.Params.link }}
+  {{ $href = $pub.Params.link }}
+  {{ $external = true }}
 {{ else if $pub.Params.doi }}
   {{ $href = $pub.Params.doi }}
   {{ $external = true }}

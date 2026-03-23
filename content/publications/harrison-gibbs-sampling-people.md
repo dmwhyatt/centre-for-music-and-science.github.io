@@ -2,7 +2,7 @@
 title: Gibbs Sampling with People
 date: 2020-01-01
 methods:
-  - large-scale-online-experiments
+- large-scale-online-experiments
 abstract: A core problem in cognitive science and machine learning is to understand
   how humans derive semantic representations from perceptual objects, such as color
   from an apple, pleasantness from a musical chord, or seriousness from a face. Markov
@@ -40,7 +40,6 @@ bibtex: |-
   }
 # generated from bibtex; do not edit manually
 journal: Advances in Neural Information Processing Systems
-doi: https://proceedings.neurips.cc/paper_files/paper/2020/file/7880d7226e872b776d8b9f23975e2a3d-Paper.pdf
 citation_apa: Harrison, P., Marjieh, R., Adolfi, F., van Rijn, P., Anglada-Tort, M.,
   Tchernichovski, O., Larrouy-Maestri, P., & Jacoby, N. (2020). Gibbs Sampling with
   People. <em>Advances in Neural Information Processing Systems</em>. https://proceedings.neurips.cc/paper_files/paper/2020/file/7880d7226e872b776d8b9f23975e2a3d-Paper.pdf
@@ -54,4 +53,5 @@ citation_ieee: '[1] P. Harrison, “Gibbs Sampling with People”, 2020. [Online
   https://proceedings.neurips.cc/paper_files/paper/2020/file/7880d7226e872b776d8b9f23975e2a3d-Paper.pdf'
 authors: Harrison, P., Marjieh, R., Adolfi, F., van Rijn, P., Anglada-Tort, M., Tchernichovski,
   O., Larrouy-Maestri, P., & Jacoby, N.
+link: https://proceedings.neurips.cc/paper_files/paper/2020/file/7880d7226e872b776d8b9f23975e2a3d-Paper.pdf
 ---
